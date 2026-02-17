@@ -1,210 +1,134 @@
+28"}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>The Little Blue Hut</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
-
-:root{
---blue:#0f3f4c;
---light:#f4fbff;
---accent:#2fb7df;
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#f3fbff;
+color:#0d3b4c;
 }
-
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
-body{background:var(--light);color:#13343d;line-height:1.6}
 
 header{
-position:fixed;
+background:#0b6d8a;
+color:white;
+padding:18px;
+position:sticky;
 top:0;
-left:0;
-width:100%;
-background:white;
-padding:14px 20px;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
 z-index:1000;
-display:flex;
-justify-content:space-between;
-align-items:center;
 }
 
-.logo{font-weight:600;font-size:20px;color:var(--blue)}
+nav{
+display:none;
+flex-direction:column;
+background:#e6f7ff;
+padding:10px;
+}
+
+nav a{
+padding:10px;
+text-decoration:none;
+color:#0b6d8a;
+font-weight:bold;
+}
+
+nav a:hover{background:#cfefff;}
 
 .menu-btn{
 font-size:26px;
 cursor:pointer;
 }
 
-nav{
-position:fixed;
-top:0;
-right:-260px;
-width:260px;
-height:100%;
-background:white;
-box-shadow:-3px 0 15px rgba(0,0,0,.15);
-padding:80px 25px;
-transition:.3s;
+.container{
+padding:20px;
+max-width:900px;
+margin:auto;
 }
 
-nav a{
-display:block;
-margin:18px 0;
-text-decoration:none;
-color:var(--blue);
-font-size:18px;
-}
-
-nav.active{right:0}
-
-.hero{
-margin-top:70px;
-height:60vh;
-background:url("images/hero.jpg") center/cover;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-}
-
-.hero h1{
-background:rgba(0,0,0,.4);
-padding:20px 30px;
-border-radius:8px;
-}
-
-section{padding:70px 20px;max-width:900px;margin:auto}
-
-h2{margin-bottom:15px;color:var(--blue)}
-
-.menu-list p{margin:6px 0;font-size:18px}
+h1{font-size:34px;margin-top:10px;}
+h2{color:#0b6d8a;margin-top:40px;}
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
 gap:12px;
 }
 
 .gallery img{
 width:100%;
-height:150px;
-object-fit:cover;
-border-radius:8px;
-}
-
-.times p{margin:5px 0}
-
-.map iframe{
-width:100%;
-height:300px;
-border:0;
 border-radius:10px;
 }
 
-.social a{
-margin-right:14px;
-text-decoration:none;
-color:var(--accent);
-font-weight:600;
-}
-
 footer{
-text-align:center;
-padding:25px;
-background:#e8f6fb;
 margin-top:40px;
+padding:20px;
+background:#0b6d8a;
+color:white;
+text-align:center;
 }
-
 </style>
+
+<script>
+function toggleMenu(){
+const nav=document.getElementById("nav");
+nav.style.display = nav.style.display==="flex" ? "none" : "flex";
+}
+</script>
 </head>
 
 <body>
 
 <header>
-<div class="logo">The Little Blue Hut</div>
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-</header>
+<span class="menu-btn" onclick="toggleMenu()">☰</span>
+<strong> The Little Blue Hut</strong>
 
 <nav id="nav">
 <a href="#about">About</a>
 <a href="#menu">Menu</a>
 <a href="#gallery">Gallery</a>
-<a href="#times">Opening Times</a>
-<a href="#find">Find Us</a>
-<a href="https://facebook.com" target="_blank">Facebook</a>
-<a href="https://instagram.com/thelittlebluehut_qb" target="_blank">Instagram</a>
-<a href="https://tiktok.com/@thelittlebluehut.qb" target="_blank">TikTok</a>
+<a href="#hours">Opening Times</a>
+<a href="https://facebook.com">Facebook</a>
+<a href="https://instagram.com">Instagram</a>
+<a href="https://tiktok.com">TikTok</a>
 </nav>
+</header>
 
-<div class="hero">
-<h1>Fresh Seafood & Shellfish by Queenborough Creek</h1>
-</div>
+<div class="container">
 
-<section id="about">
-<h2>About Us</h2>
-<p>
-Located beside Queenborough Creek, The Little Blue Hut is a small independent seafood hut
-serving freshly prepared shellfish in a relaxed coastal setting.
-</p>
-<p>
-We carefully source our seafood for freshness and flavour — proper honest food done well.
-</p>
-</section>
+<h1>The Little Blue Hut</h1>
+<p><strong>Fresh Seafood & Shellfish by Queenborough Creek</strong></p>
 
-<section id="menu">
-<h2>Seafood Menu</h2>
-<div class="menu-list">
-<p>Dressed Crab — £12</p>
-<p>Cockles — £5</p>
-<p>Jellied Eels — £4.50</p>
-<p>Large Eels — £6.50</p>
-</div>
-</section>
+<h2 id="about">About Us</h2>
+<p>Located beside Queenborough Creek, The Little Blue Hut is a small independent seafood hut serving freshly prepared shellfish in a relaxed coastal setting.</p>
+<p>We carefully source our seafood for freshness and flavour — proper honest food done well.</p>
 
-<section id="gallery">
-<h2>Gallery</h2>
+<h2 id="menu">Seafood Menu</h2>
+<p>Dressed Crab — £12<br>
+Cockles — £5<br>
+Jellied Eels — £4.50<br>
+Large Eels — £6.50</p>
+
+<h2 id="gallery">Gallery</h2>
 <div class="gallery">
 <img src="images/1.jpg">
 <img src="images/2.jpg">
 <img src="images/3.jpg">
 <img src="images/4.jpg">
 </div>
-</section>
 
-<section id="times" class="times">
-<h2>Opening Times</h2>
-<p>Friday – Sunday</p>
-<p>10am – 4pm</p>
-</section>
+<h2 id="hours">Opening Times</h2>
+<p>Friday – Sunday<br>10am – 4pm</p>
 
-<section id="find" class="map">
-<h2>Find Us</h2>
-<iframe src="https://maps.google.com/maps?q=Queenborough%20Creek&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-</section>
-
-<section class="social">
-<h2>Follow Us</h2>
-<a href="https://facebook.com">Facebook</a>
-<a href="https://instagram.com/thelittlebluehut_qb">Instagram</a>
-<a href="https://tiktok.com/@thelittlebluehut.qb">TikTok</a>
-</section>
+</div>
 
 <footer>
 © The Little Blue Hut
 </footer>
 
-<script>
-function toggleMenu(){
-document.getElementById("nav").classList.toggle("active");
-}
-</script>
-
 </body>
-</html>
+</h
