@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Little Blue Hut</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f2f6f7;
+  color:#1e3d44;
+}
+
+/* HEADER */
+.topbar{
+  background:#0f6a78;
+  color:white;
+  padding:16px;
+}
+
+.menuIcon{
+  font-size:28px;
+  cursor:pointer;
+}
+
+.title{
+  font-size:20px;
+  font-weight:bold;
+  display:inline-block;
+  margin-left:10px;
+}
+
+#menuToggle{
+  display:none;
+}
+
+.menu{
+  display:none;
+  flex-direction:column;
+  margin-top:15px;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  padding:12px 0;
+  border-top:1px solid rgba(255,255,255,0.2);
+}
+
+#menuToggle:checked ~ .menu{
+  display:flex;
+}
+
+/* CONTENT */
+.container{
+  padding:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+h1{
+  font-size:40px;
+}
+
+h2{
+  color:#0f6a78;
+  margin-top:40px;
+}
+
+.map{
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+.hours{
+  background:#e7f1f3;
+  padding:15px;
+  border-radius:10px;
+  margin-top:10px;
+}
+
+footer{
+  margin-top:40px;
+  padding:20px;
+  text-align:center;
+  font-size:14px;
+  color:#555;
+}
+
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <input type="checkbox" id="menuToggle">
+  <label for="menuToggle" class="menuIcon">☰</label>
+  <span class="title">The Little Blue Hut</span>
+
+  <nav class="menu">
+    <a href="#about">About</a>
+    <a href="#find">Find Us</a>
+    <a href="#hours">Opening Times</a>
+    <a href="https://www.facebook.com/trawlermanscatch" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/thelittlebluehut_qb" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@thelittlebluehut.qb" target="_blank">TikTok</a>
+  </nav>
+</header>
+
+<div class="container">
+
+<h1>The Little Blue Hut</h1>
+<p><strong>Fresh Seafood & Shellfish by Queenborough Creek</strong></p>
+
+<h2 id="about">About Us</h2>
+<p>
+Located beside Queenborough Creek, The Little Blue Hut is a small family run seafood & snack bar.
+We carefully source the finest seafood & shellfish full of freshness and flavour — proper honest food done well.
+</p>
+
+<h2 id="find">Find Us</h2>
+<p>South Street, Queenborough, ME11 5AF</p>
+
+<iframe class="map"
+src="https://maps.google.com/maps?q=ME11%205AF&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+
+<h2 id="hours">Opening Times</h2>
+<div class="hours">
+Mon – Closed<br>
+Tue – Closed<br>
+Wed – 10am – 4pm<br>
+Thu – 10am – 4pm<br>
+Fri – 10am – 5pm<br>
+Sat – 10am – 5pm<br>
+Sun – 10am – 4pm<br>
+Bank Holidays – 10am – 4pm
+</div>
+
+</div>
+
+<footer>
+Boat trips available on the Voyager catamaran — please enquire within.
+</footer>
+
+</body>
+</html>
