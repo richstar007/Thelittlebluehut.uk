@@ -6,121 +6,94 @@
 <title>The Little Blue Hut</title>
 
 <style>
+/* ---------- BASE ---------- */
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f4fbff;
-color:#12343b;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4fbff;
+    color:#12343b;
 }
 
-/* HEADER /
+h1,h2{margin:0 0 10px}
+section{padding:40px 20px; max-width:1000px; margin:auto}
+
+/* ---------- HEADER ---------- */
 header{
-background:#0f6a78;
-color:white;
-padding:14px 18px;
-display:flex;
-align-items:center;
-gap:15px;
-position:sticky;
-top:0;
-z-index:1000;
+    background:#0e4d64;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.menu-btn{
-font-size:26px;
-cursor:pointer;
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
 }
 
-.site-title{
-font-weight:bold;
-font-size:20px;
+.logo{font-size:20px;font-weight:bold}
+
+/* hamburger */
+.hamburger{
+    font-size:26px;
+    cursor:pointer;
 }
 
-/ MOBILE MENU /
-nav{
-position:fixed;
-top:0;
-left:-260px;
-width:260px;
-height:100%;
-background:#0f6a78;
-padding-top:70px;
-transition:.3s;
-display:flex;
-flex-direction:column;
+/* menu */
+.menu{
+    display:none;
+    flex-direction:column;
+    background:#0e4d64;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-padding:16px 22px;
-border-bottom:1px solid rgba(255,255,255,0.15);
-font-size:18px;
+.menu a{
+    color:white;
+    text-decoration:none;
+    padding:14px 20px;
+    border-top:1px solid rgba(255,255,255,0.2);
 }
 
-nav a:hover{
-background:#138a9d;
+.menu a:hover{background:#156f8c}
+
+/* ---------- HERO ---------- */
+.hero{
+    background:#b9e6ff;
+    text-align:center;
+    padding:60px 20px;
 }
 
-nav.open{
-left:0;
+.hero h1{font-size:38px}
+
+/* ---------- MAP ---------- */
+iframe{
+    width:100%;
+    height:300px;
+    border:0;
+    border-radius:10px;
 }
 
-/ PAGE CONTENT /
-.container{
-padding:22px;
-max-width:900px;
-margin:auto;
-}
-
-h1{
-font-size:36px;
-margin-bottom:5px;
-}
-
-h2{
-color:#0f6a78;
-margin-top:40px;
-}
-
-.tagline{
-font-size:18px;
-margin-bottom:25px;
-}
-
-/ GALLERY */
+/* ---------- GALLERY ---------- */
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-gap:12px;
-margin-top:15px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
 }
 
 .gallery img{
-width:100%;
-height:140px;
-object-fit:cover;
-border-radius:10px;
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:12px;
 }
 
-.placeholder{
-background:#dff3f7;
-border-radius:10px;
-height:140px;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-font-weight:bold;
-color:#0f6a78;
-padding:10px;
-}
-
+/* ---------- FOOTER ---------- */
 footer{
-text-align:center;
-padding:30px;
-color:#5f7d84;
-font-size:14px;
+    background:#0e4d64;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
 </style>
 </head>
@@ -128,54 +101,69 @@ font-size:14px;
 <body>
 
 <header>
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
-<div class="site-title">The Little Blue Hut</div>
+  <div class="navbar">
+    <div class="logo">The Little Blue Hut</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <nav class="menu" id="menu">
+    <a href="#about">About</a>
+    <a href="#find">Find Us</a>
+    <a href="#hours">Opening Times</a>
+    <a href="#gallery">Gallery</a>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/thelittlebluehut_qb" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@thelittlebluehut.qb" target="_blank">TikTok</a>
+  </nav>
 </header>
 
-<nav id="menu">
-<a href="#about" onclick="toggleMenu()">About</a>
-<a href="#find" onclick="toggleMenu()">Find Us</a>
-<a href="#times" onclick="toggleMenu()">Opening Times</a>
-<a href="#gallery" onclick="toggleMenu()">Gallery</a>
-<a href="https://facebook.com" target="_blank">Facebook</a>
-<a href="https://instagram.com" target="_blank">Instagram</a>
-<a href="https://tiktok.com" target="_blank">TikTok</a>
-</nav>
+<section class="hero">
+  <h1>The Little Blue Hut</h1>
+  <p>Fresh Seafood & Shellfish by Queenborough Creek</p>
+</section>
 
-<div class="container">
-
-<h1>The Little Blue Hut</h1>
-<div class="tagline">Fresh Seafood & Shellfish by Queenborough Creek</div>
-
-<h2 id="about">About Us</h2>
+<section id="about">
+<h2>About Us</h2>
 <p>
 Located beside Queenborough Harbour, The Little Blue Hut is a small family run seafood & snack bar.
 We carefully source the finest seafood & shellfish full of freshness and flavour — proper honest food done well.
 </p>
+</section>
 
-<h2 id="find">Find Us</h2>
+<section id="find">
+<h2>Find Us</h2>
 <p>South Street, Queenborough, ME11 5AF</p>
-<iframe
-src="https://maps.google.com/maps?q=queenborough%20harbour&t=&z=15&ie=UTF8&iwloc=&output=embed"
-width="100%" height="250" style="border:0;border-radius:10px;"></iframe>
 
-<h2 id="times">Opening Times</h2>
+<iframe
+src="https://maps.google.com/maps?q=ME11%205AF&t=&z=15&ie=UTF8&iwloc=&output=embed">
+</iframe>
+</section>
+
+<section id="hours">
+<h2>Opening Times</h2>
 <p>
 Friday – 10am – 4pm<br>
 Saturday – 10am – 4pm<br>
 Sunday – 10am – 4pm<br>
 Bank Holidays – 10am – 4pm
 </p>
+</section>
 
-<h2 id="gallery">Gallery</h2>
+<section id="gallery">
+<h2>Gallery</h2>
 <div class="gallery">
-<div class="placeholder">Your seafood photos will appear here</div>
-<div class="placeholder">Add images anytime</div>
-<div class="placeholder">They auto-resize</div>
-<div class="placeholder">Just upload later</div>
-</div>
+
+<!-- PUT YOUR PHOTOS IN /images AND RENAME BELOW -->
+
+<img src="images/1.jpg">
+<img src="images/2.jpg">
+<img src="images/3.jpg">
+<img src="images/4.jpg">
+<img src="images/5.jpg">
+<img src="images/6.jpg">
 
 </div>
+</section>
 
 <footer>
 © The Little Blue Hut
@@ -183,7 +171,8 @@ Bank Holidays – 10am – 4pm
 
 <script>
 function toggleMenu(){
-document.getElementById("menu").classList.toggle("open");
+  const menu = document.getElementById("menu");
+  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
 }
 </script>
 
