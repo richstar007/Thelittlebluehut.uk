@@ -39,12 +39,12 @@ header{
   align-items: center;
   font-size: 20px;
   font-weight: bold;
-  gap: 8px; /* space between logo and text */
+  gap: 8px;
 }
 
 .logo-img {
-  height: 28px; /* match text size */
-  width: auto;  /* keep aspect ratio */
+  height: 28px;
+  width: auto;
 }
 
 /* hamburger */
@@ -127,15 +127,15 @@ iframe{
 /* ---------- GALLERY ---------- */
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
+    grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+    gap:10px;
 }
 
 .gallery img{
     width:100%;
-    height:200px;
+    height:80px;
     object-fit:cover;
-    border-radius:12px;
+    border-radius:8px;
 }
 
 /* ---------- FOOTER ---------- */
@@ -168,7 +168,7 @@ footer{
 
 /* ---------- STICKY HEADER ANCHOR OFFSET ---------- */
 section {
-  scroll-margin-top: 80px; /* adjust to header height */
+  scroll-margin-top: 80px;
 }
 
 /* ---------- DROPDOWN HEADINGS ---------- */
@@ -196,7 +196,7 @@ section {
   <nav class="menu" id="menu">
     <a href="#about">About</a>
 
-    <!-- Dropdown Menu -->
+    <!-- Seafood Menu Dropdown -->
     <div class="dropdown">
       <a href="#">Menu ▾</a>
       <div class="dropdown-content">
@@ -229,12 +229,32 @@ section {
           <li>XL mixed pot – £8</li>
           <li>Crevette prawn – £1.50 each or 4 for £5</li>
         </ul>
+
+        <!-- Header Gallery inside Menu -->
+        <h3>Gallery</h3>
+        <div class="gallery">
+          <img src="images/IMG_0635.jpeg">
+          <img src="images/IMG_0638.jpeg">
+          <img src="images/IMG_0639.jpeg">
+          <img src="images/IMG_0641.jpeg">
+          <img src="images/IMG_0642.jpeg">
+          <img src="images/IMG_0643.jpeg">
+          <img src="images/IMG_0644.jpeg">
+          <img src="images/IMG_0645.jpeg">
+          <img src="images/IMG_0646.jpeg">
+          <img src="images/IMG_0647.jpeg">
+          <img src="images/IMG_0648.jpeg">
+          <img src="images/IMG_0649.jpeg">
+          <img src="images/IMG_5691.jpeg">
+          <img src="images/IMG_5817.jpeg">
+          <img src="images/IMG_6668.jpeg">
+          <img src="images/IMG_6791.jpeg">
+        </div>
       </div>
     </div>
 
     <a href="#find">Find Us</a>
     <a href="#hours">Opening Times</a>
-    <a href="#gallery">Gallery</a>
     <a href="https://www.facebook.com/trawlermanscatch" target="_blank">Facebook</a>
     <a href="https://www.instagram.com/thelittlebluehut_qb" target="_blank">Instagram</a>
     <a href="https://www.tiktok.com/@thelittlebluehut.qb" target="_blank">TikTok</a>
@@ -281,29 +301,6 @@ Saturday – 10am – 4pm<br>
 Sunday – 10am – 4pm<br>
 Bank Holidays – 10am – 4pm
 </p>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery">
-<h2>Gallery</h2>
-<div class="gallery">
-  <img src="images/IMG_0635.jpeg" alt="Seafood 1">
-  <img src="images/IMG_0638.jpeg" alt="Seafood 2">
-  <img src="images/IMG_0639.jpeg" alt="Seafood 3">
-  <img src="images/IMG_0641.jpeg" alt="Seafood 4">
-  <img src="images/IMG_0642.jpeg" alt="Seafood 5">
-  <img src="images/IMG_0643.jpeg" alt="Seafood 6">
-  <img src="images/IMG_0644.jpeg" alt="Seafood 7">
-  <img src="images/IMG_0645.jpeg" alt="Seafood 8">
-  <img src="images/IMG_0646.jpeg" alt="Seafood 9">
-  <img src="images/IMG_0647.jpeg" alt="Seafood 10">
-  <img src="images/IMG_0648.jpeg" alt="Seafood 11">
-  <img src="images/IMG_0649.jpeg" alt="Seafood 12">
-  <img src="images/IMG_5691.jpeg" alt="Seafood 13">
-  <img src="images/IMG_5817.jpeg" alt="Seafood 14">
-  <img src="images/IMG_6668.jpeg" alt="Seafood 15">
-  <img src="images/IMG_6791.jpeg" alt="Seafood 16">
-</div>
 </section>
 
 <!-- FOOTER -->
