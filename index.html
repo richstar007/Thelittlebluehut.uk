@@ -6,6 +6,7 @@
 <title>The Little Blue Hut</title>
 
 <style>
+/* ---------- BASE ---------- */
 body{
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
@@ -32,6 +33,7 @@ header{
     padding:15px 20px;
 }
 
+/* logo with image */
 .logo {
   display: flex;
   align-items: center;
@@ -45,11 +47,13 @@ header{
   width: auto;
 }
 
+/* hamburger */
 .hamburger{
     font-size:26px;
     cursor:pointer;
 }
 
+/* menu */
 .menu{
     display:none;
     flex-direction:column;
@@ -65,14 +69,14 @@ header{
 
 .menu a:hover{background:#156f8c}
 
-/* ---------- DROPDROPS ---------- */
+/* ---------- DROPDOWN ---------- */
 .dropdown {
   position: relative;
 }
 
 .dropdown-content {
   display: none;
-  position: relative;
+  position: relative; /* inside menu */
   background-color: #0e4d64;
   max-height: 300px;
   overflow-y: auto;
@@ -115,6 +119,28 @@ iframe{
     border-radius:10px;
 }
 
+/* ---------- GALLERY (inside dropdown) ---------- */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(80px,1fr));
+    gap:10px;
+}
+
+.gallery img{
+    width:100%;
+    height:80px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background:#0e4d64;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
 /* ---------- WHATSAPP BUTTON ---------- */
 .whatsapp-btn {
   display: block;
@@ -140,6 +166,7 @@ section {
   scroll-margin-top: 80px;
 }
 
+/* ---------- DROPDOWN HEADINGS ---------- */
 .dropdown-content h3 {
   color: #fff;
   margin: 10px 0 5px;
@@ -164,9 +191,9 @@ section {
   <nav class="menu" id="menu">
     <a href="#about">About</a>
 
-    <!-- Menu Dropdown -->
+    <!-- Seafood Menu Dropdown -->
     <div class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('menuDropdown')">Menu ▾</a>
+      <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('menuDropdown')">Menu & Gallery ▾</a>
       <div id="menuDropdown" class="dropdown-content">
         <h3>Seafood</h3>
         <ul>
@@ -180,7 +207,29 @@ section {
           <li>King prawns – £4 small / £8 large</li>
           <li>Sweet chilli prawns – £4</li>
           <li>Seafood mix – £5</li>
+          <li>Shell on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
+          <li>Crab sticks – £2.50 for 10 or 30p each / box of 64 £8.50 / sleeve of 32 £6</li>
+          <li>Pinx – 6 for £3 or 20 pack £9</li>
+          <li>Lobster tails – £2 each or pack of 3 £5</li>
+          <li>Prawn cocktail – £5 each</li>
+          <li>Seafood salad bowl – £10</li>
         </ul>
+
+        <h3>Gallery</h3>
+        <div class="gallery">
+          <img src="images/IMG_0635.jpeg">
+          <img src="images/IMG_0638.jpeg">
+          <img src="images/IMG_0639.jpeg">
+          <img src="images/IMG_0641.jpeg">
+          <img src="images/IMG_0642.jpeg">
+          <img src="images/IMG_0643.jpeg">
+          <img src="images/IMG_0644.jpeg">
+          <img src="images/IMG_0645.jpeg">
+          <img src="images/IMG_0646.jpeg">
+          <img src="images/IMG_0647.jpeg">
+          <img src="images/IMG_0648.jpeg">
+          <img src="images/IMG_0649.jpeg">
+        </div>
       </div>
     </div>
 
@@ -192,10 +241,12 @@ section {
   </nav>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero">
   <h1>The Little Blue Hut</h1>
   <p>Fresh Seafood & Shellfish by Queenborough Creek</p>
 
+  <!-- WhatsApp button -->
   <a href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20to%20place%20an%20order.%0A%0A-%20Items%3A%0A-%20Collection/Delivery%20day%3A"
      target="_blank"
      class="whatsapp-btn">
@@ -203,6 +254,7 @@ section {
   </a>
 </section>
 
+<!-- ABOUT SECTION -->
 <section id="about">
 <h2>About Us</h2>
 <p>
@@ -211,6 +263,7 @@ We carefully source the finest seafood & shellfish full of freshness and flavour
 </p>
 </section>
 
+<!-- MAP SECTION -->
 <section id="find">
 <h2>Find Us</h2>
 <p>South Street, Queenborough, ME11 5AF</p>
@@ -219,6 +272,7 @@ src="https://maps.google.com/maps?q=ME11%205AF&t=&z=15&ie=UTF8&iwloc=&output=emb
 </iframe>
 </section>
 
+<!-- OPENING TIMES -->
 <section id="hours">
 <h2>Opening Times</h2>
 <p>
@@ -229,6 +283,7 @@ Bank Holidays – 10am – 4pm
 </p>
 </section>
 
+<!-- FOOTER -->
 <footer>
 © The Little Blue Hut
 </footer>
@@ -237,7 +292,7 @@ Bank Holidays – 10am – 4pm
 function toggleMenu(){
   const menu = document.getElementById("menu");
   menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-  menu.style.flexDirection = "column";
+  menu.style.flexDirection = "column"; // ensure mobile stacking
 }
 
 function toggleDropdown(id){
