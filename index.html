@@ -76,10 +76,9 @@ header{
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: relative; /* inside menu */
   background-color: #0e4d64;
-  min-width: 250px;
-  max-height: 400px;
+  max-height: 300px;
   overflow-y: auto;
   z-index: 1001;
   border: 1px solid rgba(255,255,255,0.2);
@@ -103,10 +102,6 @@ header{
   background: #156f8c;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 /* ---------- HERO ---------- */
 .hero{
     background:#b9e6ff;
@@ -124,10 +119,10 @@ iframe{
     border-radius:10px;
 }
 
-/* ---------- GALLERY ---------- */
+/* ---------- GALLERY (inside dropdown) ---------- */
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(80px,1fr));
     gap:10px;
 }
 
@@ -198,8 +193,8 @@ section {
 
     <!-- Seafood Menu Dropdown -->
     <div class="dropdown">
-      <a href="#">Menu ▾</a>
-      <div class="dropdown-content">
+      <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('menuDropdown')">Menu ▾</a>
+      <div id="menuDropdown" class="dropdown-content">
         <h3>Seafood</h3>
         <ul>
           <li>Jellied eels – £5.50 / 5 pieces</li>
@@ -230,7 +225,7 @@ section {
           <li>Crevette prawn – £1.50 each or 4 for £5</li>
         </ul>
 
-        <!-- Header Gallery inside Menu -->
+        <!-- Gallery inside menu -->
         <h3>Gallery</h3>
         <div class="gallery">
           <img src="images/IMG_0635.jpeg">
@@ -312,6 +307,11 @@ Bank Holidays – 10am – 4pm
 function toggleMenu(){
   const menu = document.getElementById("menu");
   menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+
+function toggleDropdown(id){
+  const dropdown = document.getElementById(id);
+  dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
 }
 </script>
 
