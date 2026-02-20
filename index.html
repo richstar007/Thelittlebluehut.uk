@@ -193,7 +193,7 @@ section {
 
     <!-- Seafood Menu Dropdown -->
     <div class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('menuDropdown')">Menu ▾</a>
+      <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('menuDropdown')">Menu & Gallery ▾</a>
       <div id="menuDropdown" class="dropdown-content">
         <h3>Seafood</h3>
         <ul>
@@ -213,19 +213,8 @@ section {
           <li>Lobster tails – £2 each or pack of 3 £5</li>
           <li>Prawn cocktail – £5 each</li>
           <li>Seafood salad bowl – £10</li>
-          <li>Crab meat 454g – £12</li>
-          <li>Cromer Crabs – £8 each</li>
-          <li>Dressed crab – £9</li>
-          <li>Oysters – £2 each / 3 for £5</li>
-          <li>Brown shrimp – £3.50 small / £8 large</li>
-          <li>New Zealand mussels – bag of 6 £4 / box £12</li>
-          <li>Crab flake – small £3.50 / large £6 / slab £10</li>
-          <li>Crab claws – 5 for £6.50</li>
-          <li>XL mixed pot – £8</li>
-          <li>Crevette prawn – £1.50 each or 4 for £5</li>
         </ul>
 
-        <!-- Gallery inside menu -->
         <h3>Gallery</h3>
         <div class="gallery">
           <img src="images/IMG_0635.jpeg">
@@ -240,10 +229,6 @@ section {
           <img src="images/IMG_0647.jpeg">
           <img src="images/IMG_0648.jpeg">
           <img src="images/IMG_0649.jpeg">
-          <img src="images/IMG_5691.jpeg">
-          <img src="images/IMG_5817.jpeg">
-          <img src="images/IMG_6668.jpeg">
-          <img src="images/IMG_6791.jpeg">
         </div>
       </div>
     </div>
@@ -307,6 +292,7 @@ Bank Holidays – 10am – 4pm
 function toggleMenu(){
   const menu = document.getElementById("menu");
   menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  menu.style.flexDirection = "column"; // ensure mobile stacking
 }
 
 function toggleDropdown(id){
