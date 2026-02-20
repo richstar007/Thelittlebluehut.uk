@@ -33,7 +33,19 @@ header{
     padding:15px 20px;
 }
 
-.logo{font-size:20px;font-weight:bold}
+/* logo with image */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  gap: 8px; /* space between logo and text */
+}
+
+.logo-img {
+  height: 28px; /* match text size */
+  width: auto;  /* keep aspect ratio */
+}
 
 /* hamburger */
 .hamburger{
@@ -158,6 +170,15 @@ footer{
 section {
   scroll-margin-top: 80px; /* adjust to header height */
 }
+
+/* ---------- DROPDOWN HEADINGS ---------- */
+.dropdown-content h3 {
+  color: #fff;
+  margin: 10px 0 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 3px;
+  font-size: 16px;
+}
 </style>
 </head>
 
@@ -165,7 +186,10 @@ section {
 
 <header>
   <div class="navbar">
-    <div class="logo">The Little Blue Hut</div>
+    <div class="logo">
+      <img src="images/logo.png" alt="The Little Blue Hut Logo" class="logo-img">
+      The Little Blue Hut
+    </div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 
@@ -176,6 +200,7 @@ section {
     <div class="dropdown">
       <a href="#">Menu ▾</a>
       <div class="dropdown-content">
+        <h3>Seafood</h3>
         <ul>
           <li>Jellied eels – £5.50 / 5 pieces</li>
           <li>Cockles – £3.50 small / £7 large</li>
@@ -223,10 +248,9 @@ section {
 
   <!-- WhatsApp button -->
   <a href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20to%20place%20an%20order.%0A%0A-%20Items%3A%0A-%20Collection/Delivery%20day%3A"
-   target="_blank"
-   class="whatsapp-btn">
-   Order via WhatsApp
-</a>
+     target="_blank"
+     class="whatsapp-btn">
+     Order via WhatsApp
   </a>
 </section>
 
