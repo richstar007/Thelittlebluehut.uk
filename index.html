@@ -49,6 +49,26 @@ header{
   width:auto;
 }
 
+.socials {
+  display:flex;
+  gap:12px;
+  align-items:center;
+  font-size:16px;
+}
+
+.socials a {
+  color:white;
+  text-decoration:none;
+  padding:4px 8px;
+  background:rgba(255,255,255,0.1);
+  border-radius:6px;
+  transition:background 0.2s;
+}
+
+.socials a:hover {
+  background:rgba(255,255,255,0.3);
+}
+
 .hamburger{
   font-size:26px;
   cursor:pointer;
@@ -147,6 +167,15 @@ footer{
 }
 
 section{scroll-margin-top:90px;}
+
+/* ---------- RESPONSIVE ---------- */
+@media screen and (max-width:768px){
+  .socials{
+    flex-direction:row;
+    font-size:14px;
+    gap:6px;
+  }
+}
 </style>
 </head>
 
@@ -158,6 +187,14 @@ section{scroll-margin-top:90px;}
       <img src="images/logo.JPG" alt="The Little Blue Hut Logo">
       The Little Blue Hut
     </div>
+
+    <!-- Compact Social Media Links -->
+    <div class="socials">
+      <a href="https://www.facebook.com/trawlermanscatch" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/thelittlebluehut_qb" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@thelittlebluehut.qb" target="_blank">TikTok</a>
+    </div>
+
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 
@@ -215,9 +252,6 @@ section{scroll-margin-top:90px;}
 
     <a href="#find">Find Us</a>
     <a href="#hours">Opening Times</a>
-    <a href="https://www.facebook.com/trawlermanscatch" target="_blank">Facebook</a>
-    <a href="https://www.instagram.com/thelittlebluehut_qb" target="_blank">Instagram</a>
-    <a href="https://www.tiktok.com/@thelittlebluehut.qb" target="_blank">TikTok</a>
   </nav>
 </header>
 
