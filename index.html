@@ -6,12 +6,11 @@
 <title>The Little Blue Hut</title>
 
 <style>
-/* ---------- BASE ---------- */
 body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    background:#f4fbff;
-    color:#12343b;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4fbff;
+  color:#12343b;
 }
 
 h1,h2,h3{margin:0 0 10px}
@@ -19,161 +18,128 @@ section{padding:40px 20px; max-width:1000px; margin:auto}
 
 /* ---------- HEADER ---------- */
 header{
-    background:#0e4d64;
-    color:white;
-    position:sticky;
-    top:0;
-    z-index:1000;
+  background:#0e4d64;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 .navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
 }
 
-/* logo with image */
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  font-weight: bold;
-  gap: 8px;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:20px;
+  font-weight:bold;
 }
 
-.logo-img {
-  height: 28px;
-  width: auto;
+.logo img{
+  height:28px;
+  width:auto;
 }
 
-/* hamburger */
 .hamburger{
-    font-size:26px;
-    cursor:pointer;
+  font-size:26px;
+  cursor:pointer;
 }
 
-/* menu */
+/* ---------- MENU ---------- */
 .menu{
-    display:none;
-    flex-direction:column;
-    background:#0e4d64;
+  display:none;
+  flex-direction:column;
+  background:#0e4d64;
 }
 
 .menu a{
-    color:white;
-    text-decoration:none;
-    padding:14px 20px;
-    border-top:1px solid rgba(255,255,255,0.2);
+  color:white;
+  text-decoration:none;
+  padding:14px 20px;
+  border-top:1px solid rgba(255,255,255,0.2);
 }
 
 .menu a:hover{background:#156f8c}
 
 /* ---------- DROPDOWN ---------- */
-.dropdown {
-  position: relative;
+.dropdown-content{
+  display:none;
+  background:#0e4d64;
+  max-height:320px;
+  overflow-y:auto;
+  border:1px solid rgba(255,255,255,0.2);
+  padding:10px;
+  margin:0 20px 10px;
+  border-radius:8px;
 }
 
-.dropdown-content {
-  display: none;
-  position: relative; /* inside menu */
-  background-color: #0e4d64;
-  max-height: 300px;
-  overflow-y: auto;
-  z-index: 1001;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-  padding: 10px;
+.dropdown-content ul{
+  list-style:none;
+  padding:0;
+  margin:0;
 }
 
-.dropdown-content ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.dropdown-content li{
+  color:white;
+  padding:6px 0;
+  border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
-.dropdown-content li {
-  color: white;
-  padding: 6px 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-}
-
-.dropdown-content li:hover {
-  background: #156f8c;
+.dropdown-content h3{
+  margin-top:10px;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,0.2);
+  padding-bottom:4px;
 }
 
 /* ---------- HERO ---------- */
 .hero{
-    background:#b9e6ff;
-    text-align:center;
-    padding:60px 20px;
+  background:#b9e6ff;
+  text-align:center;
+  padding:60px 20px;
 }
 
 .hero h1{font-size:38px}
 
+/* ---------- WHATSAPP ---------- */
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.whatsapp-btn:hover{
+  opacity:0.9;
+}
+
 /* ---------- MAP ---------- */
 iframe{
-    width:100%;
-    height:300px;
-    border:0;
-    border-radius:10px;
-}
-
-/* ---------- GALLERY (inside dropdown) ---------- */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(80px,1fr));
-    gap:10px;
-}
-
-.gallery img{
-    width:100%;
-    height:80px;
-    object-fit:cover;
-    border-radius:8px;
+  width:100%;
+  height:300px;
+  border:0;
+  border-radius:10px;
 }
 
 /* ---------- FOOTER ---------- */
 footer{
-    background:#0e4d64;
-    color:white;
-    text-align:center;
-    padding:20px;
+  background:#0e4d64;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 
-/* ---------- WHATSAPP BUTTON ---------- */
-.whatsapp-btn {
-  display: block;
-  text-align: center;
-  background: #25D366;
-  color: #fff;
-  padding: 14px 22px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 15px auto 0 auto;
-  transition: opacity 0.3s ease, transform 0.2s ease;
-}
-
-.whatsapp-btn:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
-}
-
-/* ---------- STICKY HEADER ANCHOR OFFSET ---------- */
-section {
-  scroll-margin-top: 80px;
-}
-
-/* ---------- DROPDOWN HEADINGS ---------- */
-.dropdown-content h3 {
-  color: #fff;
-  margin: 10px 0 5px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-bottom: 3px;
-  font-size: 16px;
-}
+section{scroll-margin-top:90px;}
 </style>
 </head>
 
@@ -182,7 +148,7 @@ section {
 <header>
   <div class="navbar">
     <div class="logo">
-      <img src="images/logo.JPG" alt="The Little Blue Hut Logo" class="logo-img">
+      <img src="images/logo.JPG" alt="The Little Blue Hut Logo">
       The Little Blue Hut
     </div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -191,76 +157,54 @@ section {
   <nav class="menu" id="menu">
     <a href="#about">About</a>
 
-    <!-- Seafood Menu Dropdown -->
-    <div class="dropdown">
-      <a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdown('menuDropdown')">Menu & Gallery ▾</a>
-     <div id="menuDropdown" class="dropdown-content">
+    <a href="javascript:void(0)" onclick="toggleDropdown()">Menu ▾</a>
 
-  <h3>Seafood</h3>
-  <ul>
-    <li>Jellied eels – £5.50 / 5 pieces</li>
-    <li>Cockles – £3.50 small / £7 large</li>
-    <li>Whelks – £3.50 small / £7 large</li>
-    <li>Winkles – half pint £4.50 / 1 pint £6.50</li>
-    <li>Mussels – £3.50 small / £7 large</li>
-    <li>Crayfish tails – £4 small / £8 large</li>
-    <li>Prawns – £4 small / £8 large</li>
-    <li>King prawns – £4 small / £8 large</li>
-    <li>Sweet chilli prawns – £4</li>
-    <li>Seafood mix – £5</li>
-    <li>Shell on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
-    <li>Crab sticks – £2.50 for 10 or 30p each</li>
-    <li>Pinx – 6 for £3 or 20 for £9</li>
-    <li>Lobster tails – £2 each or 3 for £5</li>
-    <li>Prawn cocktail – £5</li>
-    <li>Seafood salad bowl – £10</li>
+    <div id="menuDropdown" class="dropdown-content">
+      <h3>Seafood</h3>
+      <ul>
+        <li>Jellied eels – £5.50 / 5 pieces</li>
+        <li>Cockles – £3.50 small / £7 large</li>
+        <li>Whelks – £3.50 small / £7 large</li>
+        <li>Winkles – half pint £4.50 / 1 pint £6.50</li>
+        <li>Mussels – £3.50 small / £7 large</li>
+        <li>Crayfish tails – £4 small / £8 large</li>
+        <li>Prawns – £4 small / £8 large</li>
+        <li>King prawns – £4 small / £8 large</li>
+        <li>Sweet chilli prawns – £4</li>
+        <li>Seafood mix – £5</li>
+        <li>Shell on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
+        <li>Crab sticks – £2.50 for 10 or 30p each</li>
+        <li>Pinx – 6 for £3 or 20 for £9</li>
+        <li>Lobster tails – £2 each or 3 for £5</li>
+        <li>Prawn cocktail – £5</li>
+        <li>Seafood salad bowl – £10</li>
+        <li>Crab meat (454g) – £12</li>
+        <li>Cromer crabs – £8 each</li>
+        <li>Dressed crab – £9</li>
+        <li>Oysters – £2 each or 3 for £5</li>
+        <li>Brown shrimp – £3.50 small / £8 large</li>
+        <li>New Zealand mussels – 6 for £4 or box £12</li>
+        <li>Crab flake – small £3.50 / large £6 / slab £10</li>
+        <li>Crab claws – 5 for £6.50</li>
+        <li>XL mixed pot – £8</li>
+        <li>Crevette prawns – £1.50 each or 4 for £5</li>
+      </ul>
 
-    <li>Crab meat (454g) – £12</li>
-    <li>Cromer crabs – £8 each</li>
-    <li>Dressed crab – £9</li>
-    <li>Oysters – £2 each or 3 for £5</li>
-    <li>Brown shrimp – £3.50 small / £8 large</li>
-    <li>New Zealand mussels – 6 for £4 or box £12</li>
-    <li>Crab flake – small £3.50 / large £6 / slab £10</li>
-    <li>Crab claws – 5 for £6.50</li>
-    <li>XL mixed pot – £8</li>
-    <li>Crevette prawns – £1.50 each or 4 for £5</li>
-  </ul>
+      <h3>Condiments</h3>
+      <ul>
+        <li>Vinegar / chilli vinegar – £2.50 bottle</li>
+        <li>Coleman’s seafood sauce – £2</li>
+        <li>Seafood sauce (1 litre) – £4.50</li>
+        <li>Sweet chilli sauce (1 litre) – £4.50</li>
+      </ul>
 
-  <h3>Condiments</h3>
-  <ul>
-    <li>Vinegar / Chilli vinegar – £2.50 bottle</li>
-    <li>Coleman’s seafood sauce – £2</li>
-    <li>Seafood sauce (1 litre) – £4.50</li>
-    <li>Sweet chilli sauce (1 litre) – £4.50</li>
-  </ul>
-
-  <h3>Seafood Platters</h3>
-  <ul>
-    <li>Small – £25</li>
-    <li>Medium – £40</li>
-    <li>Large – £60</li>
-    <li>Extra large – £80</li>
-  </ul>
-
-</div>
-
-        <h3>Gallery</h3>
-        <div class="gallery">
-          <img src="images/IMG_0635.jpeg">
-          <img src="images/IMG_0638.jpeg">
-          <img src="images/IMG_0639.jpeg">
-          <img src="images/IMG_0641.jpeg">
-          <img src="images/IMG_0642.jpeg">
-          <img src="images/IMG_0643.jpeg">
-          <img src="images/IMG_0644.jpeg">
-          <img src="images/IMG_0645.jpeg">
-          <img src="images/IMG_0646.jpeg">
-          <img src="images/IMG_0647.jpeg">
-          <img src="images/IMG_0648.jpeg">
-          <img src="images/IMG_0649.jpeg">
-        </div>
-      </div>
+      <h3>Seafood Platters</h3>
+      <ul>
+        <li>Small – £25</li>
+        <li>Medium – £40</li>
+        <li>Large – £60</li>
+        <li>Extra large – £80</li>
+      </ul>
     </div>
 
     <a href="#find">Find Us</a>
@@ -271,54 +215,41 @@ section {
   </nav>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
   <h1>The Little Blue Hut</h1>
   <p>Fresh Seafood & Shellfish by Queenborough Creek</p>
 
-  <!-- WhatsApp button -->
-  <a href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20to%20place%20an%20order.%0A%0A-%20Items%3A%0A-%20Collection/Delivery%20day%3A"
-     target="_blank"
-     class="whatsapp-btn">
+  <a class="whatsapp-btn"
+     href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20to%20place%20an%20order.%0A%0A-%20Items%3A%0A-%20Collection/Delivery%20day%3A"
+     target="_blank">
      Order via WhatsApp
   </a>
 </section>
 
-<!-- ABOUT SECTION -->
 <section id="about">
-<h2>About Us</h2>
-<p>
-Located beside Queenborough Harbour, The Little Blue Hut is a small family run seafood & snack bar.
-We carefully source the finest seafood & shellfish full of freshness and flavour — proper honest food done well.
-</p>
+  <h2>About Us</h2>
+  <p>
+    Located beside Queenborough Harbour, The Little Blue Hut is a small family run seafood & snack bar.
+    We carefully source the finest seafood & shellfish full of freshness and flavour — proper honest food done well.
+  </p>
 </section>
 
-<!-- MAP SECTION -->
 <section id="find">
   <h2>Find Us</h2>
   <p>South Street, Queenborough, ME11 5AF</p>
-
-  <iframe
-    src="https://www.google.com/maps?q=ME11%205AF&output=embed"
-    width="100%"
-    height="300"
-    style="border:0; border-radius:10px;"
-    allowfullscreen=""
-    loading="lazy">
-  </iframe>
+  <iframe src="https://www.google.com/maps?q=ME11%205AF&output=embed"></iframe>
 </section>
-<!-- OPENING TIMES -->
+
 <section id="hours">
-<h2>Opening Times</h2>
-<p>
-Friday – 10am – 4pm<br>
-Saturday – 10am – 4pm<br>
-Sunday – 10am – 4pm<br>
-Bank Holidays – 10am – 4pm
-</p>
+  <h2>Opening Times</h2>
+  <p>
+    Friday – 10am – 4pm<br>
+    Saturday – 10am – 4pm<br>
+    Sunday – 10am – 4pm<br>
+    Bank Holidays – 10am – 4pm
+  </p>
 </section>
 
-<!-- FOOTER -->
 <footer>
 © The Little Blue Hut
 </footer>
@@ -326,13 +257,12 @@ Bank Holidays – 10am – 4pm
 <script>
 function toggleMenu(){
   const menu = document.getElementById("menu");
-  menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-  menu.style.flexDirection = "column"; // ensure mobile stacking
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
-function toggleDropdown(id){
-  const dropdown = document.getElementById(id);
-  dropdown.style.display = (dropdown.style.display === "block") ? "none" : "block";
+function toggleDropdown(){
+  const drop = document.getElementById("menuDropdown");
+  drop.style.display = drop.style.display === "block" ? "none" : "block";
 }
 </script>
 
