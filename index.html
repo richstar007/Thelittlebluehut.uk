@@ -180,46 +180,6 @@ iframe{
   color:#555;
 }
 
-/* ---------- REVIEWS ---------- */
-.reviews-section {
-  padding:40px 20px;
-  max-width:900px;
-  margin:auto;
-  display:none; /* Hidden by default */
-}
-
-.reviews-section h2 {
-  font-family: 'Lobster', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-.review {
-  background: #e0f7ff;
-  border-left: 4px solid #0e4d64;
-  padding: 20px 25px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 1px 1px 8px rgba(0,0,0,0.05);
-}
-
-.review h3 {
-  font-family: Arial, sans-serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #0e4d64;
-}
-
-.review p {
-  font-size: 1rem;
-  color: #12343b;
-  line-height: 1.5;
-  margin: 0;
-}
-
 /* ---------- FOOTER ---------- */
 footer{
   background:#0e4d64;
@@ -316,7 +276,7 @@ section{scroll-margin-top:90px;}
       </ul>
     </div>
 
-    <a href="#reviews" id="reviewsLink">Reviews</a>
+    <a href="#reviews">Reviews</a>
     <a href="#find">Find Us</a>
     <a href="#hours">Opening Times</a>
   </nav>
@@ -341,38 +301,6 @@ section{scroll-margin-top:90px;}
     We proudly source high-quality seafood and shellfish, serving fresh, 
     flavour-packed food — simple, honest, and done right.
   </p>
-</section>
-
-<!-- Reviews Section -->
-<section id="reviews" class="reviews-section">
-  <h2>Reviews</h2>
-  
-  <button id="backHome" style="
-    display:block;
-    margin:0 auto 20px auto;
-    padding:10px 20px;
-    font-size:1rem;
-    background:#0e4d64;
-    color:white;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-  ">← Back to Home</button>
-
-  <div class="review">
-    <h3>Rich Dicks</h3>
-    <p>“Amazing selection and friendly staff. Popped by today and got a platter made up and a nice refreshing drink. See you next weekend for another one :)”</p>
-  </div>
-
-  <div class="review">
-    <h3>Tom Havill</h3>
-    <p>“The selection is great, excellent value for money. The staff are friendly, what more could you ask for. You should go out of your way to go there.”</p>
-  </div>
-
-  <div class="review">
-    <h3>Hayley Betty Smith</h3>
-    <p>“Best Seafood I have had in ages!! Lots of choice and everything tasted incredible. I will definitely be going my weekend seafood fixes from Trawlermans. The platters are so good if you fancy to try a few bits. Support your local business.”</p>
-  </div>
 </section>
 
 <section id="find">
@@ -405,27 +333,6 @@ function toggleDropdown(){
   const drop = document.getElementById("menuDropdown");
   drop.style.display = drop.style.display === "block" ? "none" : "block";
 }
-
-// Show Reviews only when Reviews link is clicked
-document.addEventListener("DOMContentLoaded", function() {
-  const reviewsLink = document.getElementById("reviewsLink");
-  const reviewsSection = document.getElementById("reviews");
-  const backHome = document.getElementById("backHome");
-
-  // Show Reviews
-  reviewsLink.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
-    reviewsSection.style.display = "block";
-    reviewsSection.scrollIntoView({behavior:"smooth"});
-  });
-
-  // Back to Home
-  backHome.addEventListener("click", function() {
-    document.querySelectorAll("section").forEach(sec => sec.style.display = "block");
-    window.scrollTo({top:0, behavior:"smooth"});
-  });
-});
 </script>
 
 </body>
