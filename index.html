@@ -6,7 +6,6 @@
 
 <title>The Little Blue Hut</title>
 
-<!-- Lobster font -->
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 <style>
@@ -34,48 +33,37 @@ header{
   justify-content:space-between;
   align-items:center;
   padding:15px 20px;
-  flex-wrap:nowrap;
 }
 
-/* Logo + socials container */
-.logo-socials {
+.logo-socials{
   display:flex;
   align-items:center;
   gap:20px;
-  flex-wrap:nowrap;
 }
 
-/* Logo bigger */
 .logo{
   display:flex;
   align-items:center;
   gap:8px;
-  font-size:28px;        /* increased */
+  font-size:28px;
   font-family:'Lobster', cursive;
 }
 
 .logo img{
-  height:40px;           /* increased */
-  width:auto;
+  height:40px;
 }
 
-.socials {
+.socials{
   display:flex;
   gap:12px;
-  align-items:center;
 }
 
-.socials a {
+.socials a{
   color:white;
   text-decoration:none;
   padding:4px 8px;
-  background: rgba(255,255,255,0.1);
+  background:rgba(255,255,255,0.1);
   border-radius:6px;
-  transition:background 0.2s;
-}
-
-.socials a:hover {
-  background: rgba(255,255,255,0.3);
 }
 
 .hamburger{
@@ -103,7 +91,7 @@ header{
 .dropdown-content{
   display:none;
   background:#0e4d64;
-  max-height:320px;
+  max-height:340px;
   overflow-y:auto;
   border:1px solid rgba(255,255,255,0.2);
   padding:10px;
@@ -124,10 +112,15 @@ header{
 }
 
 .dropdown-content h3{
-  margin-top:10px;
-  color:#fff;
+  margin-top:12px;
+  color:white;
   border-bottom:1px solid rgba(255,255,255,0.2);
   padding-bottom:4px;
+}
+
+/* Reviews highlight */
+.dropdown-content h3.reviews-title{
+  color:#ffd700;
 }
 
 /* ---------- HERO ---------- */
@@ -155,10 +148,6 @@ header{
   font-weight:bold;
 }
 
-.whatsapp-btn:hover{
-  opacity:0.9;
-}
-
 /* ---------- MAP ---------- */
 iframe{
   width:100%;
@@ -177,17 +166,10 @@ footer{
 
 section{scroll-margin-top:90px;}
 
-/* ---------- RESPONSIVE ---------- */
 @media screen and (max-width:768px){
-  .logo-socials {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .socials {
-    flex-wrap: wrap;
-    gap:6px;
-    font-size:14px;
+  .logo-socials{
+    flex-direction:column;
+    align-items:flex-start;
   }
 }
 </style>
@@ -216,51 +198,36 @@ section{scroll-margin-top:90px;}
     <a href="javascript:void(0)" onclick="toggleDropdown()">Menu ▾</a>
 
     <div id="menuDropdown" class="dropdown-content">
+
       <h3>Seafood</h3>
       <ul>
         <li>Jellied eels – £5.50 / 5 pieces</li>
         <li>Cockles – £3.50 small / £7 large</li>
         <li>Whelks – £3.50 small / £7 large</li>
-        <li>Winkles – half pint £4.50 / 1 pint £6.50</li>
+        <li>Winkles – £4.50 half / £6.50 pint</li>
         <li>Mussels – £3.50 small / £7 large</li>
-        <li>Crayfish tails – £4 small / £8 large</li>
-        <li>Prawns – £4 small / £8 large</li>
-        <li>King prawns – £4 small / £8 large</li>
-        <li>Sweet chilli prawns – £4</li>
-        <li>Seafood mix – £5</li>
-        <li>Shell on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
-        <li>Crab sticks – £2.50 for 10 or 30p each</li>
-        <li>Pinx – 6 for £3 or 20 for £9</li>
-        <li>Lobster tails – £2 each or 3 for £5</li>
-        <li>Prawn cocktail – £5</li>
-        <li>Seafood salad bowl – £10</li>
         <li>Crab meat (454g) – £12</li>
         <li>Cromer crabs – £8 each</li>
         <li>Dressed crab – £9</li>
         <li>Oysters – £2 each or 3 for £5</li>
-        <li>Brown shrimp – £3.50 small / £8 large</li>
-        <li>New Zealand mussels – 6 for £4 or box £12</li>
-        <li>Crab flake – small £3.50 / large £6 / slab £10</li>
-        <li>Crab claws – 5 for £6.50</li>
-        <li>XL mixed pot – £8</li>
-        <li>Crevette prawns – £1.50 each or 4 for £5</li>
       </ul>
 
-      <h3>Condiments</h3>
-      <ul>
-        <li>Vinegar / chilli vinegar – £2.50 bottle</li>
-        <li>Coleman’s seafood sauce – £2</li>
-        <li>Seafood sauce (1 litre) – £4.50</li>
-        <li>Sweet chilli sauce (1 litre) – £4.50</li>
-      </ul>
-
-      <h3>Seafood Platters</h3>
+      <h3>Platters</h3>
       <ul>
         <li>Small – £25</li>
         <li>Medium – £40</li>
         <li>Large – £60</li>
         <li>Extra large – £80</li>
       </ul>
+
+      <!-- REVIEWS ONLY IN DROPDOWN -->
+      <h3 class="reviews-title">Reviews</h3>
+      <ul>
+        <li>⭐⭐⭐⭐⭐ “Absolutely brilliant seafood – couldn’t be fresher.”</li>
+        <li>⭐⭐⭐⭐⭐ “Best crab and shellfish in Queenborough.”</li>
+        <li>⭐⭐⭐⭐⭐ “Friendly staff and top quality every time.”</li>
+      </ul>
+
     </div>
 
     <a href="#find">Find Us</a>
@@ -283,7 +250,7 @@ section{scroll-margin-top:90px;}
   <h2>About Us</h2>
   <p>
     Located beside Queenborough Harbour, The Little Blue Hut is a small family run seafood & snack bar.
-    We carefully source the finest seafood & shellfish full of freshness and flavour — proper honest food done well.
+    We carefully source the finest seafood & shellfish full of freshness and flavour.
   </p>
 </section>
 
@@ -296,10 +263,8 @@ section{scroll-margin-top:90px;}
 <section id="hours">
   <h2>Opening Times</h2>
   <p>
-    Friday – 10am – 4pm<br>
-    Saturday – 10am – 4pm<br>
-    Sunday – 10am – 4pm<br>
-    Bank Holidays – 10am – 4pm
+    Friday – Sunday: 10am – 4pm<br>
+    Bank Holidays: 10am – 4pm
   </p>
 </section>
 
