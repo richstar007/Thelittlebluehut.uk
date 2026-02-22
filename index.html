@@ -185,6 +185,7 @@ iframe{
   padding:40px 20px;
   max-width:900px;
   margin:auto;
+  display:none; /* Hidden by default */
 }
 
 .reviews-section h2 {
@@ -202,7 +203,6 @@ iframe{
   margin-bottom: 20px;
   border-radius: 8px;
   box-shadow: 1px 1px 8px rgba(0,0,0,0.05);
-  position: relative;
 }
 
 .review h3 {
@@ -218,15 +218,6 @@ iframe{
   color: #12343b;
   line-height: 1.5;
   margin: 0;
-}
-
-/* Add seafood/star icon */
-.review::before {
-  content: "🦞 ";
-  position: absolute;
-  left: 10px;
-  top: 20px;
-  font-size: 1.2rem;
 }
 
 /* ---------- FOOTER ---------- */
@@ -325,7 +316,7 @@ section{scroll-margin-top:90px;}
       </ul>
     </div>
 
-    <a href="#reviews">Reviews</a>
+    <a href="#reviews" id="reviewsLink">Reviews</a>
     <a href="#find">Find Us</a>
     <a href="#hours">Opening Times</a>
   </nav>
@@ -368,7 +359,7 @@ section{scroll-margin-top:90px;}
 
   <div class="review">
     <h3>Hayley Betty Smith</h3>
-    <p>“Best Seafood 🦞 I have had in ages!! Lots of choice and everything tasted incredible. I will definitely be going my weekend seafood fixes from Trawlermans. The platters are so good if you fancy to try a few bits. Support your local business.”</p>
+    <p>“Best Seafood I have had in ages!! Lots of choice and everything tasted incredible. I will definitely be going my weekend seafood fixes from Trawlermans. The platters are so good if you fancy to try a few bits. Support your local business.”</p>
   </div>
 </section>
 
@@ -402,6 +393,20 @@ function toggleDropdown(){
   const drop = document.getElementById("menuDropdown");
   drop.style.display = drop.style.display === "block" ? "none" : "block";
 }
+
+// Show Reviews only when Reviews link is clicked
+document.addEventListener("DOMContentLoaded", function() {
+  const reviewsLink = document.getElementById("reviewsLink");
+  const reviewsSection = document.getElementById("reviews");
+
+  reviewsLink.addEventListener("click", function(e) {
+    e.preventDefault();
+    // Hide all other sections
+    document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
+    reviewsSection.style.display = "block";
+    reviewsSection.scrollIntoView({behavior:"smooth"});
+  });
+});
 </script>
 
 </body>
