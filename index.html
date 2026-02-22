@@ -346,6 +346,18 @@ section{scroll-margin-top:90px;}
 <!-- Reviews Section -->
 <section id="reviews" class="reviews-section">
   <h2>Reviews</h2>
+  
+  <button id="backHome" style="
+    display:block;
+    margin:0 auto 20px auto;
+    padding:10px 20px;
+    font-size:1rem;
+    background:#0e4d64;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+  ">← Back to Home</button>
 
   <div class="review">
     <h3>Rich Dicks</h3>
@@ -398,13 +410,20 @@ function toggleDropdown(){
 document.addEventListener("DOMContentLoaded", function() {
   const reviewsLink = document.getElementById("reviewsLink");
   const reviewsSection = document.getElementById("reviews");
+  const backHome = document.getElementById("backHome");
 
+  // Show Reviews
   reviewsLink.addEventListener("click", function(e) {
     e.preventDefault();
-    // Hide all other sections
     document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
     reviewsSection.style.display = "block";
     reviewsSection.scrollIntoView({behavior:"smooth"});
+  });
+
+  // Back to Home
+  backHome.addEventListener("click", function() {
+    document.querySelectorAll("section").forEach(sec => sec.style.display = "block");
+    window.scrollTo({top:0, behavior:"smooth"});
   });
 });
 </script>
