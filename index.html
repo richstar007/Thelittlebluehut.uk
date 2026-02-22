@@ -76,6 +76,7 @@ header{
   display:none;
   flex-direction:column;
   background:#0e4d64;
+  position:relative;
 }
 
 .menu a{
@@ -90,13 +91,17 @@ header{
 /* ---------- DROPDOWN ---------- */
 .dropdown-content{
   display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  right:0;
   background:#0e4d64;
   max-height:340px;
   overflow-y:auto;
   border:1px solid rgba(255,255,255,0.2);
   padding:10px;
-  margin:0 20px 10px;
   border-radius:8px;
+  z-index:1000;
 }
 
 .dropdown-content ul{
@@ -225,7 +230,7 @@ section{scroll-margin-top:90px;}
       <ul>
         <li>⭐⭐⭐⭐⭐ “Absolutely brilliant seafood – couldn’t be fresher.”</li>
         <li>⭐⭐⭐⭐⭐ “Best crab and shellfish in Queenborough.”</li>
-        <li>⭐⭐⭐⭐⭐ “Friendly staff and top quality every time.”</li>
+        <li>⭐⭐⭐⭐⭐ “Friendly staff and top quality every time.”li>
       </ul>
 
     </div>
@@ -275,14 +280,19 @@ section{scroll-margin-top:90px;}
 <script>
 function toggleMenu(){
   const menu = document.getElementById("menu");
-  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  menu.classList.toggle("open");
 }
 
 function toggleDropdown(){
   const drop = document.getElementById("menuDropdown");
-  drop.style.display = drop.style.display === "block" ? "none" : "block";
+  drop.classList.toggle("open");
 }
 </script>
+
+<style>
+.menu.open{display:flex;}
+.dropdown-content.open{display:block;}
+</style>
 
 </body>
 </html>
