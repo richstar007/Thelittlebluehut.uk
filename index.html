@@ -37,6 +37,7 @@ header{
   flex-wrap:nowrap;
 }
 
+/* Wrap logo + socials together */
 .logo-socials {
   display:flex;
   align-items:center;
@@ -48,12 +49,12 @@ header{
   display:flex;
   align-items:center;
   gap:10px;
-  font-size:26px; /* slightly bigger font */
+  font-size:26px; /* slightly bigger text */
   font-family:'Lobster', cursive;
 }
 
 .logo img{
-  height:42px; /* slightly bigger logo */
+  height:44px; /* updated logo height */
   width:auto;
 }
 
@@ -176,7 +177,7 @@ footer{
 
 /* ---------- FIX SCROLLING FOR STICKY HEADER ---------- */
 #about, #find, #hours {
-  scroll-margin-top: 90px; /* prevents header from covering section */
+  scroll-margin-top: 90px;
 }
 
 /* ---------- SECTION HEADINGS IN LOBSTER FONT ---------- */
@@ -284,7 +285,7 @@ footer{
     <a href="javascript:void(0)" onclick="alert('Voyager catamaran boat trips coming soon. ⛴️⚓️')">Boat Trips</a>
   </nav>
 
-  <!-- Reviews shown only in header -->
+  <!-- Reviews only in header -->
   <div id="headerReview">
     <p>Rich Dicks – Amazing selection and friendly staff.</p>
     <p>Jane Smith – Fresh seafood, excellent service!</p>
