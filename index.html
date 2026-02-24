@@ -37,6 +37,7 @@ header{
   flex-wrap:nowrap;
 }
 
+/* Wrap logo + socials together */
 .logo-socials {
   display:flex;
   align-items:center;
@@ -176,7 +177,7 @@ footer{
 
 /* ---------- FIX SCROLLING FOR STICKY HEADER ---------- */
 #about, #find, #hours {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 90px; /* prevents header from covering section */
 }
 
 /* ---------- SECTION HEADINGS IN LOBSTER FONT ---------- */
@@ -213,16 +214,6 @@ footer{
   border-left:3px solid #0e4d64;
 }
 
-/* ---------- INLINE BOAT MESSAGE ---------- */
-#boatMessage{
-  display:none;
-  background:#e0f7ff;
-  color:#0e4d64;
-  text-align:center;
-  padding:10px;
-  font-weight:bold;
-}
-
 /* ---------- RESPONSIVE ---------- */
 @media screen and (max-width:768px){
   .socials {
@@ -254,16 +245,62 @@ footer{
   </div>
 
   <nav class="menu" id="menu">
-    <a href="#about-anchor">About</a>
+    <a href="#about">About</a>
     <a href="javascript:void(0)" onclick="toggleDropdown()">Menu ▾</a>
+
+    <div id="menuDropdown" class="dropdown-content">
+      <h3>Seafood</h3>
+      <ul>
+        <li>Jellied eels – £5.50 / 5 pieces</li>
+        <li>Cockles – £3.50 small / £7 large</li>
+        <li>Whelks – £3.50 small / £7 large</li>
+        <li>Winkles – half pint £4.50 / 1 pint £6.50</li>
+        <li>Mussels – £3.50 small / £7 large</li>
+        <li>Crayfish tails – £4 small / £8 large</li>
+        <li>Prawns – £4 small / £8 large</li>
+        <li>King prawns – £4 small / £8 large</li>
+        <li>Sweet chilli prawns – £4</li>
+        <li>Seafood mix – £5</li>
+        <li>Shell on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
+        <li>Crab sticks – £2.50 for 10 or 30p each</li>
+        <li>Pinx – 6 for £3 or 20 for £9</li>
+        <li>Prawn cocktail – £5</li>
+        <li>Seafood salad bowl – £10</li>
+        <li>Crab meat (454g) – £12</li>
+        <li>Cromer crabs – £8 each</li>
+        <li>Dressed crab – £9</li>
+        <li>Oysters – £2 each or 3 for £5</li>
+        <li>Brown shrimp – £3.50 small / £8 large</li>
+        <li>New Zealand mussels – 6 for £4 or box £12</li>
+        <li>Crab flake – small £3.50 / large £6 / slab £10</li>
+        <li>Crab claws – 5 for £6.50</li>
+        <li>XL mixed pot – £8</li>
+        <li>Crevette prawns – £1.50 each or 4 for £5</li>
+      </ul>
+
+      <h3>Condiments</h3>
+      <ul>
+        <li>Vinegar / chilli vinegar – £2.50 bottle</li>
+        <li>Coleman’s seafood sauce – £2</li>
+        <li>Seafood sauce (1 litre) – £4.50</li>
+        <li>Sweet chilli sauce (1 litre) – £4.50</li>
+      </ul>
+
+      <h3>Seafood Platters</h3>
+      <ul>
+        <li>Small – £25</li>
+        <li>Medium – £40</li>
+        <li>Large – £60</li>
+        <li>Extra large – £80</li>
+      </ul>
+    </div>
+
     <a href="#find">Find Us</a>
     <a href="#hours">Opening Times</a>
-    <a href="javascript:void(0)" onclick="showBoatMessage()">Boat Trips</a>
+    <!-- New Boat Trips item -->
+    <a href="javascript:void(0)" onclick="alert('Voyager catamaran boat trips coming soon. ⛴️⚓️')">Boat Trips</a>
   </nav>
 </header>
-
-<!-- Inline Boat Trips message -->
-<div id="boatMessage">Voyager catamaran boat trips coming soon. ⛴️⚓️</div>
 
 <section class="hero">
   <h1>The Little Blue Hut</h1>
@@ -276,8 +313,6 @@ footer{
   </a>
 </section>
 
-<!-- Invisible anchor for About -->
-<div id="about-anchor" style="position:relative; top:-90px;"></div>
 <section id="about">
   <h2>About Us</h2>
   <p>
@@ -302,6 +337,7 @@ footer{
   </p>
 </section>
 
+<!-- ---------- Reviews Section ---------- -->
 <section class="review-section">
   <div class="review-toggle" onclick="toggleReviews()">Customer Reviews ▾</div>
   <div class="review-content" id="reviewContent">
@@ -330,13 +366,6 @@ function toggleDropdown(){
 function toggleReviews(){
   const review = document.getElementById("reviewContent");
   review.style.display = review.style.display === "block" ? "none" : "block";
-}
-
-// Show inline Boat Trips message
-function showBoatMessage(){
-  const msg = document.getElementById("boatMessage");
-  msg.style.display = "block";
-  msg.scrollIntoView({behavior:"smooth"});
 }
 </script>
 
