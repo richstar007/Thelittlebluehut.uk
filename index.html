@@ -37,7 +37,6 @@ header{
   flex-wrap:nowrap;
 }
 
-/* Wrap logo + socials together */
 .logo-socials {
   display:flex;
   align-items:center;
@@ -48,13 +47,13 @@ header{
 .logo{
   display:flex;
   align-items:center;
-  gap:8px;
-  font-size:22px;
+  gap:10px;
+  font-size:26px; /* slightly bigger font */
   font-family:'Lobster', cursive;
 }
 
 .logo img{
-  height:32px;
+  height:42px; /* slightly bigger logo */
   width:auto;
 }
 
@@ -186,32 +185,16 @@ footer{
   font-size: 32px;
 }
 
-/* ---------- REVIEWS ---------- */
-.review-section{
-  max-width:800px;
-  margin:40px auto;
-  padding:20px;
-  background:#e0f7ff;
-  border-radius:10px;
-}
-
-.review-toggle{
-  display:inline-block;
-  margin-bottom:10px;
-  cursor:pointer;
-  font-weight:bold;
-  color:#0e4d64;
-}
-
-.review-content{
+/* ---------- REVIEW DROPDOWN IN HEADER ---------- */
+#headerReview{
   display:none;
-  margin-top:10px;
-}
-
-.review-content p{
-  margin:8px 0;
-  padding-left:10px;
-  border-left:3px solid #0e4d64;
+  background:#e0f7ff;
+  color:#0e4d64;
+  padding:10px;
+  text-align:center;
+  font-weight:bold;
+  border-radius:8px;
+  margin-top:5px;
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -297,9 +280,16 @@ footer{
 
     <a href="#find">Find Us</a>
     <a href="#hours">Opening Times</a>
-    <!-- New Boat Trips item -->
+    <a href="javascript:void(0)" onclick="showHeaderReview()">Reviews ▾</a>
     <a href="javascript:void(0)" onclick="alert('Voyager catamaran boat trips coming soon. ⛴️⚓️')">Boat Trips</a>
   </nav>
+
+  <!-- Reviews shown only in header -->
+  <div id="headerReview">
+    <p>Rich Dicks – Amazing selection and friendly staff.</p>
+    <p>Jane Smith – Fresh seafood, excellent service!</p>
+    <p>Tom H. – Highly recommend The Little Blue Hut!</p>
+  </div>
 </header>
 
 <section class="hero">
@@ -337,16 +327,6 @@ footer{
   </p>
 </section>
 
-<!-- ---------- Reviews Section ---------- -->
-<section class="review-section">
-  <div class="review-toggle" onclick="toggleReviews()">Customer Reviews ▾</div>
-  <div class="review-content" id="reviewContent">
-    <p>Rich Dicks – Amazing selection and friendly staff.</p>
-    <p>Jane Smith – Fresh seafood, excellent service!</p>
-    <p>Tom H. – Highly recommend The Little Blue Hut!</p>
-  </div>
-</section>
-
 <footer>
 © The Little Blue Hut
 </footer>
@@ -362,9 +342,9 @@ function toggleDropdown(){
   drop.style.display = drop.style.display === "block" ? "none" : "block";
 }
 
-// Toggle Reviews
-function toggleReviews(){
-  const review = document.getElementById("reviewContent");
+// Show reviews only in header
+function showHeaderReview(){
+  const review = document.getElementById("headerReview");
   review.style.display = review.style.display === "block" ? "none" : "block";
 }
 </script>
