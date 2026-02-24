@@ -175,7 +175,16 @@ footer{
   padding:20px;
 }
 
-section{scroll-margin-top:90px;}
+/* ---------- FIX SCROLLING FOR STICKY HEADER ---------- */
+#about, #find, #hours {
+  scroll-margin-top: 90px; /* prevents header from covering section */
+}
+
+/* ---------- SECTION HEADINGS IN LOBSTER FONT ---------- */
+#about h2, #find h2, #hours h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 32px;
+}
 
 /* ---------- REVIEWS ---------- */
 .review-section{
