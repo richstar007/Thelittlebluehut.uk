@@ -34,7 +34,7 @@ header{
   justify-content:space-between;
   align-items:center;
   padding:15px 20px;
-  flex-wrap:nowrap; /* prevent wrapping */
+  flex-wrap:nowrap;
 }
 
 /* Wrap logo + socials together */
@@ -54,7 +54,7 @@ header{
 }
 
 .logo img{
-  height:28px;
+  height:32px;
   width:auto;
 }
 
@@ -177,6 +177,34 @@ footer{
 
 section{scroll-margin-top:90px;}
 
+/* ---------- REVIEWS ---------- */
+.review-section{
+  max-width:800px;
+  margin:40px auto;
+  padding:20px;
+  background:#e0f7ff;
+  border-radius:10px;
+}
+
+.review-toggle{
+  display:inline-block;
+  margin-bottom:10px;
+  cursor:pointer;
+  font-weight:bold;
+  color:#0e4d64;
+}
+
+.review-content{
+  display:none;
+  margin-top:10px;
+}
+
+.review-content p{
+  margin:8px 0;
+  padding-left:10px;
+  border-left:3px solid #0e4d64;
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media screen and (max-width:768px){
   .socials {
@@ -227,7 +255,6 @@ section{scroll-margin-top:90px;}
         <li>Shell on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
         <li>Crab sticks – £2.50 for 10 or 30p each</li>
         <li>Pinx – 6 for £3 or 20 for £9</li>
-        <li>Lobster tails – £2 each or 3 for £5</li>
         <li>Prawn cocktail – £5</li>
         <li>Seafood salad bowl – £10</li>
         <li>Crab meat (454g) – £12</li>
@@ -261,6 +288,8 @@ section{scroll-margin-top:90px;}
 
     <a href="#find">Find Us</a>
     <a href="#hours">Opening Times</a>
+    <!-- New Boat Trips item -->
+    <a href="javascript:void(0)" onclick="alert('Voyager catamaran boat trips coming soon. ⛴️⚓️')">Boat Trips</a>
   </nav>
 </header>
 
@@ -299,6 +328,16 @@ section{scroll-margin-top:90px;}
   </p>
 </section>
 
+<!-- ---------- Reviews Section ---------- -->
+<section class="review-section">
+  <div class="review-toggle" onclick="toggleReviews()">Customer Reviews ▾</div>
+  <div class="review-content" id="reviewContent">
+    <p>Rich Dicks – Amazing selection and friendly staff.</p>
+    <p>Jane Smith – Fresh seafood, excellent service!</p>
+    <p>Tom H. – Highly recommend The Little Blue Hut!</p>
+  </div>
+</section>
+
 <footer>
 © The Little Blue Hut
 </footer>
@@ -312,6 +351,12 @@ function toggleMenu(){
 function toggleDropdown(){
   const drop = document.getElementById("menuDropdown");
   drop.style.display = drop.style.display === "block" ? "none" : "block";
+}
+
+// Toggle Reviews
+function toggleReviews(){
+  const review = document.getElementById("reviewContent");
+  review.style.display = review.style.display === "block" ? "none" : "block";
 }
 </script>
 
