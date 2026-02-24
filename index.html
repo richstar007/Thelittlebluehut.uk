@@ -3,78 +3,135 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>The Little Blue Hut</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4fbff;
+  color:#12343b;
 }
 
-header {
-  background: #0a2c3d;
-  padding: 15px 20px;
+h1,h2,h3{margin:0 0 10px}
+section{padding:40px 20px; max-width:1000px; margin:auto}
+
+/* ---------- HEADER ---------- */
+header{
+  background:#0e4d64;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.logo-socials{
+  display:flex;
+  align-items:center;
+  gap:20px;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:28px;
+  font-family:'Lobster', cursive;
 }
 
-/* Homepage */
-#home {
-  padding: 40px 20px;
-  text-align: center;
+.logo img{height:40px}
+
+.socials{display:flex; gap:12px}
+
+.socials a{
+  color:white;
+  text-decoration:none;
+  padding:4px 8px;
+  background:rgba(255,255,255,0.1);
+  border-radius:6px;
 }
 
-/* Reviews Section */
-#reviews-section {
-  display: none;
-  padding: 40px 20px;
-  background: #f5f5f5;
+.hamburger{font-size:26px; cursor:pointer}
+
+/* ---------- MENU ---------- */
+.menu{
+  display:none;
+  flex-direction:column;
+  background:#0e4d64;
 }
 
-.review {
-  max-width: 700px;
-  margin: 20px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
+.menu a{
+  color:white;
+  text-decoration:none;
+  padding:14px 20px;
+  border-top:1px solid rgba(255,255,255,0.2);
 }
 
-.review-stars {
-  color: #f5b50a;
-  font-size: 20px;
-  margin-bottom: 10px;
+.menu a:hover{background:#156f8c}
+
+/* ---------- DROPDOWN ---------- */
+.dropdown-content{
+  display:none;
+  background:#0e4d64;
+  max-height:320px;
+  overflow-y:auto;
+  padding:10px;
+  margin:0 20px 10px;
+  border-radius:8px;
 }
 
-.review-name {
-  margin-top: 10px;
-  font-weight: bold;
+/* ---------- HERO ---------- */
+.hero{
+  background:#b9e6ff;
+  text-align:center;
+  padding:60px 20px;
 }
 
-.close-reviews {
-  text-align: center;
-  margin-top: 30px;
+.hero h1{
+  font-size:38px;
+  font-family:'Lobster', cursive;
 }
 
-.close-reviews button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+/* ---------- REVIEWS ---------- */
+.reviews-section{
+  display:none;
+  max-width:900px;
+}
+
+.review{
+  background:#e0f7ff;
+  border-left:4px solid #0e4d64;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:8px;
+}
+
+.review h3{color:#0e4d64}
+
+.back-btn{
+  display:block;
+  margin:30px auto;
+  padding:12px 24px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:#0e4d64;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 </style>
 </head>
@@ -82,68 +139,87 @@ nav a:hover {
 <body>
 
 <header>
-  <nav>
-    <ul>
-      <li><a href="#" onclick="showHome()">Home</a></li>
-      <li><a href="#" onclick="showReviews()">Reviews</a></li>
-    </ul>
+  <div class="navbar">
+    <div class="logo-socials">
+      <div class="logo">
+        <img src="images/logo.JPG">
+        The Little Blue Hut
+      </div>
+      <div class="socials">
+        <a href="https://www.facebook.com/trawlermanscatch" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/thelittlebluehut_qb" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@thelittlebluehut.qb" target="_blank">TikTok</a>
+      </div>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <nav class="menu" id="menu">
+    <a href="#" onclick="showHome()">Home</a>
+    <a href="#about" onclick="showHome()">About</a>
+    <a href="#" onclick="showReviews()">Reviews</a>
+    <a href="#find" onclick="showHome()">Find Us</a>
+    <a href="#hours" onclick="showHome()">Opening Times</a>
   </nav>
 </header>
 
-<!-- HOME PAGE -->
-<section id="home">
+<section class="hero home-section">
   <h1>The Little Blue Hut</h1>
   <p>Quality Seafood & Shellfish by Queenborough Creek</p>
 </section>
 
-<!-- REVIEWS (HIDDEN BY DEFAULT) -->
-<section id="reviews-section">
-
-  <h2 style="text-align:center;">Customer Reviews</h2>
-
-  <div class="review">
-    <div class="review-stars">★★★★★</div>
-    <p>
-      Amazing selection and friendly staff. Popped by today and got a platter made up
-      and a nice refreshing drink. See you next weekend for another one :)
-    </p>
-    <div class="review-name">— Rich Dicks</div>
-  </div>
-
-  <div class="review">
-    <div class="review-stars">★★★★★</div>
-    <p>
-      We absolutely loved our visit to The Little Blue Hut. Enjoying seafood by the bay
-      with a glass of Prosecco was truly wonderful. We highly recommend it for anyone
-      visiting. We will be back soon 😍
-    </p>
-    <div class="review-name">— Evita Sahmoud</div>
-  </div>
-
-  <div class="review">
-    <div class="review-stars">★★★★★</div>
-    <p>
-      The selection is great, excellent value for money. The staff are friendly,
-      what more could you ask for. You should go out of your way to go there.
-    </p>
-    <div class="review-name">— Tom Havill</div>
-  </div>
-
-  <div class="close-reviews">
-    <button onclick="showHome()">Back to Home</button>
-  </div>
-
+<section id="about" class="home-section">
+  <h2>About Us</h2>
+  <p>Family-run seafood hut serving fresh local shellfish since 2021.</p>
 </section>
 
+<section id="reviews" class="reviews-section">
+  <h2>Customer Reviews</h2>
+
+  <div class="review">
+    <h3>Rich Dicks</h3>
+    <p>Amazing selection and friendly staff. Popped by today and got a platter made up and a nice refreshing drink. See you next weekend for another one :)</p>
+  </div>
+
+  <div class="review">
+    <h3>Evita Sahmoud</h3>
+    <p>We absolutely loved our visit to The Little Blue Hut. Enjoying seafood by the bay with a glass of Prosecco was truly wonderful. Highly recommended — we will be back soon 😍</p>
+  </div>
+
+  <div class="review">
+    <h3>Tom Havill</h3>
+    <p>The selection is great, excellent value for money. The staff are friendly — what more could you ask for.</p>
+  </div>
+
+  <button class="back-btn" onclick="showHome()">Back to Home</button>
+</section>
+
+<section id="find" class="home-section">
+  <h2>Find Us</h2>
+  <iframe src="https://www.google.com/maps?q=ME11%205AF&output=embed"></iframe>
+</section>
+
+<section id="hours" class="home-section">
+  <h2>Opening Times</h2>
+  <p>Fri–Sun: 10am – 4pm</p>
+</section>
+
+<footer>© The Little Blue Hut</footer>
+
 <script>
-function showReviews() {
-  document.getElementById("home").style.display = "none";
-  document.getElementById("reviews-section").style.display = "block";
+function toggleMenu(){
+  const menu=document.getElementById("menu");
+  menu.style.display=menu.style.display==="flex"?"none":"flex";
 }
 
-function showHome() {
-  document.getElementById("reviews-section").style.display = "none";
-  document.getElementById("home").style.display = "block";
+function showReviews(){
+  document.querySelectorAll(".home-section").forEach(s=>s.style.display="none");
+  document.getElementById("reviews").style.display="block";
+}
+
+function showHome(){
+  document.getElementById("reviews").style.display="none";
+  document.querySelectorAll(".home-section").forEach(s=>s.style.display="block");
 }
 </script>
 
