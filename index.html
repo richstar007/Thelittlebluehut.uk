@@ -6,7 +6,6 @@
 
 <title>The Little Blue Hut</title>
 
-<!-- Lobster font -->
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 <style>
@@ -34,18 +33,14 @@ header{
   justify-content:space-between;
   align-items:center;
   padding:15px 20px;
-  flex-wrap:nowrap;
 }
 
-/* Logo + socials container */
-.logo-socials {
+.logo-socials{
   display:flex;
   align-items:center;
   gap:20px;
-  flex-wrap:nowrap;
 }
 
-/* Logo bigger */
 .logo{
   display:flex;
   align-items:center;
@@ -56,26 +51,19 @@ header{
 
 .logo img{
   height:40px;
-  width:auto;
 }
 
-.socials {
+.socials{
   display:flex;
   gap:12px;
-  align-items:center;
 }
 
-.socials a {
+.socials a{
   color:white;
   text-decoration:none;
   padding:4px 8px;
-  background: rgba(255,255,255,0.1);
+  background:rgba(255,255,255,0.1);
   border-radius:6px;
-  transition:background 0.2s;
-}
-
-.socials a:hover {
-  background: rgba(255,255,255,0.3);
 }
 
 .hamburger{
@@ -99,37 +87,6 @@ header{
 
 .menu a:hover{background:#156f8c}
 
-/* ---------- DROPDOWN ---------- */
-.dropdown-content{
-  display:none;
-  background:#0e4d64;
-  max-height:320px;
-  overflow-y:auto;
-  border:1px solid rgba(255,255,255,0.2);
-  padding:10px;
-  margin:0 20px 10px;
-  border-radius:8px;
-}
-
-.dropdown-content ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.dropdown-content li{
-  color:white;
-  padding:6px 0;
-  border-bottom:1px solid rgba(255,255,255,0.2);
-}
-
-.dropdown-content h3{
-  margin-top:10px;
-  color:#fff;
-  border-bottom:1px solid rgba(255,255,255,0.2);
-  padding-bottom:4px;
-}
-
 /* ---------- HERO ---------- */
 .hero{
   background:#b9e6ff;
@@ -142,7 +99,6 @@ header{
   font-family:'Lobster', cursive;
 }
 
-/* ---------- WHATSAPP ---------- */
 .whatsapp-btn{
   display:inline-block;
   margin-top:20px;
@@ -155,8 +111,29 @@ header{
   font-weight:bold;
 }
 
-.whatsapp-btn:hover{
-  opacity:0.9;
+/* ---------- REVIEWS ---------- */
+.reviews-section{
+  display:none;
+}
+
+.review{
+  background:#e0f7ff;
+  border-left:4px solid #0e4d64;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:8px;
+}
+
+.review h3{
+  color:#0e4d64;
+}
+
+.back-btn{
+  display:block;
+  margin:30px auto;
+  padding:12px 24px;
+  font-size:16px;
+  cursor:pointer;
 }
 
 /* ---------- MAP ---------- */
@@ -167,81 +144,12 @@ iframe{
   border-radius:10px;
 }
 
-/* ---------- ABOUT US ---------- */
-#about h2 {
-  font-family:'Lobster', cursive;
-  font-size:2.5rem;
-  margin-bottom:1rem;
-  letter-spacing:1px;
-}
-
-#about p {
-  font-size:1.1rem;
-  color:#555;
-}
-
-/* ---------- REVIEWS ---------- */
-.reviews-section {
-  padding:40px 20px;
-  max-width:900px;
-  margin:auto;
-  display:none; /* Hidden by default */
-}
-
-.reviews-section h2 {
-  font-family: 'Lobster', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-.review {
-  background: #e0f7ff;
-  border-left: 4px solid #0e4d64;
-  padding: 20px 25px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 1px 1px 8px rgba(0,0,0,0.05);
-}
-
-.review h3 {
-  font-family: Arial, sans-serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #0e4d64;
-}
-
-.review p {
-  font-size: 1rem;
-  color: #12343b;
-  line-height: 1.5;
-  margin: 0;
-}
-
 /* ---------- FOOTER ---------- */
 footer{
   background:#0e4d64;
   color:white;
   text-align:center;
   padding:20px;
-}
-
-section{scroll-margin-top:90px;}
-
-/* ---------- RESPONSIVE ---------- */
-@media screen and (max-width:768px){
-  .logo-socials {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-  .socials {
-    flex-wrap: wrap;
-    gap:6px;
-    font-size:14px;
-  }
 }
 </style>
 </head>
@@ -252,7 +160,7 @@ section{scroll-margin-top:90px;}
   <div class="navbar">
     <div class="logo-socials">
       <div class="logo">
-        <img src="images/logo.JPG" alt="The Little Blue Hut Logo">
+        <img src="images/logo.JPG" alt="Logo">
         The Little Blue Hut
       </div>
       <div class="socials">
@@ -265,62 +173,16 @@ section{scroll-margin-top:90px;}
   </div>
 
   <nav class="menu" id="menu">
-    <a href="#about">About</a>
-    <a href="javascript:void(0)" onclick="toggleDropdown()">Menu ▾</a>
-
-    <div id="menuDropdown" class="dropdown-content">
-      <h3>Seafood</h3>
-      <ul>
-        <li>Jellied eels – £5.50 / 5 pieces</li>
-        <li>Cockles – £3.50 small / £7 large</li>
-        <li>Whelks – £3.50 small / £7 large</li>
-        <li>Winkles – half pint £4.50 / 1 pint £6.50</li>
-        <li>Mussels – £3.50 small / £7 large</li>
-        <li>Crayfish tails – £4 small / £8 large</li>
-        <li>Prawns – £4 small / £8 large</li>
-        <li>King prawns – £4 small / £8 large</li>
-        <li>Sweet chilli prawns – £4</li>
-        <li>Seafood mix – £5</li>
-        <li>Shell on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
-        <li>Crab sticks – £2.50 for 10 or 30p each</li>
-        <li>Pinx – 6 for £3 or 20 for £9</li>
-        <li>Lobster tails – £2 each or 3 for £5</li>
-        <li>Prawn cocktail – £5</li>
-        <li>Seafood salad bowl – £10</li>
-        <li>Crab meat (454g) – £12</li>
-        <li>Cromer crabs – £8 each</li>
-        <li>Dressed crab – £9</li>
-        <li>Oysters – £2 each or 3 for £5</li>
-        <li>Brown shrimp – £3.50 small / £8 large</li>
-        <li>New Zealand mussels – 6 for £4 or box £12</li>
-        <li>Crab flake – small £3.50 / large £6 / slab £10</li>
-        <li>Crab claws – 5 for £6.50</li>
-        <li>XL mixed pot – £8</li>
-        <li>Crevette prawns – £1.50 each or 4 for £5</li>
-      </ul>
-
-      <h3>Condiments</h3>
-      <ul>
-        <li>Vinegar / chilli vinegar – £2.50 bottle</li>
-        <li>Coleman’s seafood sauce – £2</li>
-        <li>Seafood sauce (1 litre) – £4.50</li>
-        <li>Sweet chilli sauce (1 litre) – £4.50</li>
-      </ul>
-
-      <h3>Seafood Platters</h3>
-      <ul>
-        <li>Small – £25</li>
-        <li>Medium – £40</li>
-        <li>Large – £60</li>
-        <li>Extra large – £80</li>
-      </ul>
-    </div>
-
-    <a href="#reviews" id="reviewsLink">Reviews</a>
-    <a href="#find">Find Us</a>
-    <a href="#hours">Opening Times</a>
+    <a href="#" onclick="showHome()">Home</a>
+    <a href="#about" onclick="showHome()">About</a>
+    <a href="#" onclick="showReviews()">Reviews</a>
+    <a href="#find" onclick="showHome()">Find Us</a>
+    <a href="#hours" onclick="showHome()">Opening Times</a>
   </nav>
 </header>
+
+<!-- HOME CONTENT -->
+<div id="homeContent">
 
 <section class="hero">
   <h1>The Little Blue Hut</h1>
@@ -335,32 +197,7 @@ section{scroll-margin-top:90px;}
 
 <section id="about">
   <h2>About Us</h2>
-  <p>
-    Nestled beside Queenborough Harbour, <strong>The Little Blue Hut</strong> is a small, 
-    family-run seafood and snack bar — <strong>Est. 2021</strong>. 
-    We proudly source high-quality seafood and shellfish, serving fresh, 
-    flavour-packed food — simple, honest, and done right.
-  </p>
-</section>
-
-<!-- Reviews Section -->
-<section id="reviews" class="reviews-section">
-  <h2>Reviews</h2>
-
-  <div class="review">
-    <h3>Rich Dicks</h3>
-    <p>“Amazing selection and friendly staff. Popped by today and got a platter made up and a nice refreshing drink. See you next weekend for another one :)”</p>
-  </div>
-
-  <div class="review">
-    <h3>Tom Havill</h3>
-    <p>“The selection is great, excellent value for money. The staff are friendly, what more could you ask for. You should go out of your way to go there.”</p>
-  </div>
-
-  <div class="review">
-    <h3>Hayley Betty Smith</h3>
-    <p>“Best Seafood I have had in ages!! Lots of choice and everything tasted incredible. I will definitely be going my weekend seafood fixes from Trawlermans. The platters are so good if you fancy to try a few bits. Support your local business.”</p>
-  </div>
+  <p>Family-run seafood hut serving fresh local shellfish since 2021.</p>
 </section>
 
 <section id="find">
@@ -379,6 +216,30 @@ section{scroll-margin-top:90px;}
   </p>
 </section>
 
+</div>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-section">
+  <h2>Customer Reviews</h2>
+
+  <div class="review">
+    <h3>Rich Dicks</h3>
+    <p>Amazing selection and friendly staff. Popped by today and got a platter made up and a nice refreshing drink. See you next weekend for another one :)</p>
+  </div>
+
+  <div class="review">
+    <h3>Evita Sahmoud</h3>
+    <p>We absolutely loved our visit to The Little Blue Hut. Enjoying seafood by the bay with a glass of Prosecco was truly wonderful. Highly recommended — we will be back soon 😍</p>
+  </div>
+
+  <div class="review">
+    <h3>Tom Havill</h3>
+    <p>The selection is great, excellent value for money. The staff are friendly — what more could you ask for.</p>
+  </div>
+
+  <button class="back-btn" onclick="showHome()">Back to Home</button>
+</section>
+
 <footer>
 © The Little Blue Hut
 </footer>
@@ -389,24 +250,17 @@ function toggleMenu(){
   menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
-function toggleDropdown(){
-  const drop = document.getElementById("menuDropdown");
-  drop.style.display = drop.style.display === "block" ? "none" : "block";
+function showReviews(){
+  document.getElementById("homeContent").style.display = "none";
+  document.getElementById("reviews").style.display = "block";
+  window.scrollTo({top:0});
 }
 
-// Show Reviews only when Reviews link is clicked
-document.addEventListener("DOMContentLoaded", function() {
-  const reviewsLink = document.getElementById("reviewsLink");
-  const reviewsSection = document.getElementById("reviews");
-
-  reviewsLink.addEventListener("click", function(e) {
-    e.preventDefault();
-    // Hide all other sections
-    document.querySelectorAll("section").forEach(sec => sec.style.display = "none");
-    reviewsSection.style.display = "block";
-    reviewsSection.scrollIntoView({behavior:"smooth"});
-  });
-});
+function showHome(){
+  document.getElementById("reviews").style.display = "none";
+  document.getElementById("homeContent").style.display = "block";
+  window.scrollTo({top:0});
+}
 </script>
 
 </body>
