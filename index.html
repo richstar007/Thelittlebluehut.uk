@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKY44F4Z09"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -8,11 +8,13 @@
   gtag('js', new Date());
   gtag('config', 'G-ZKY44F4Z09');
 </script>
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Little Blue Hut</title>
+<title>The Little Blue Hut | Fresh Seafood, Shellfish & Boat Trips in Queenborough</title>
+<meta name="description" content="The Little Blue Hut in Queenborough offers fresh seafood, shellfish, snacks, drinks and local Voyager Boat Trips departing from Queenborough Harbour.">
 
 <!-- Lobster font -->
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -45,8 +47,7 @@ header{
   flex-wrap:nowrap;
 }
 
-/* Wrap logo + socials together */
-.logo-socials {
+.logo-socials{
   display:flex;
   align-items:center;
   gap:20px;
@@ -57,23 +58,23 @@ header{
   display:flex;
   align-items:center;
   gap:10px;
-  font-size:28px; /* slightly bigger text */
+  font-size:28px;
   font-family:'Lobster', cursive;
 }
 
 .logo img{
-  height:50px; /* updated logo height */
+  height:50px;
   width:auto;
 }
 
-.socials {
+.socials{
   display:flex;
   gap:12px;
   align-items:center;
   font-size:16px;
 }
 
-.socials a {
+.socials a{
   color:white;
   text-decoration:none;
   padding:4px 8px;
@@ -82,7 +83,7 @@ header{
   transition:background 0.2s;
 }
 
-.socials a:hover {
+.socials a:hover{
   background:rgba(255,255,255,0.3);
 }
 
@@ -150,10 +151,17 @@ header{
   font-family:'Lobster', cursive;
 }
 
-/* ---------- WHATSAPP ---------- */
+.hero p{
+  max-width:700px;
+  margin:10px auto;
+  font-size:18px;
+  line-height:1.5;
+}
+
+/* ---------- BUTTONS ---------- */
 .whatsapp-btn{
   display:inline-block;
-  margin-top:20px;
+  margin:10px 8px 0;
   background:#25D366;
   color:#fff;
   padding:14px 22px;
@@ -165,6 +173,44 @@ header{
 
 .whatsapp-btn:hover{
   opacity:0.9;
+}
+
+.secondary-btn{
+  display:inline-block;
+  margin:10px 8px 0;
+  background:#0e4d64;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.secondary-btn:hover{
+  opacity:0.9;
+}
+
+/* ---------- BOAT TRIPS ---------- */
+.boat-trips{
+  background:#e9f8ff;
+  border-radius:12px;
+}
+
+.boat-trips .trip{
+  background:#fff;
+  border-radius:10px;
+  padding:18px;
+  margin:15px 0;
+  box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.boat-trips .trip h3{
+  margin-bottom:8px;
+}
+
+.boat-trips p{
+  line-height:1.6;
 }
 
 /* ---------- MAP ---------- */
@@ -184,14 +230,14 @@ footer{
 }
 
 /* ---------- FIX SCROLLING FOR STICKY HEADER ---------- */
-#about, #find, #hours {
+#about, #boattrips, #find, #hours {
   scroll-margin-top: 90px;
 }
 
 /* ---------- SECTION HEADINGS IN LOBSTER FONT ---------- */
-#about h2, #find h2, #hours h2 {
-  font-family: 'Lobster', cursive;
-  font-size: 32px;
+#about h2, #boattrips h2, #find h2, #hours h2 {
+  font-family:'Lobster', cursive;
+  font-size:32px;
 }
 
 /* ---------- REVIEW DROPDOWN IN HEADER ---------- */
@@ -206,11 +252,31 @@ footer{
   margin-top:5px;
 }
 
+#headerReview p{
+  margin:8px 0;
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media screen and (max-width:768px){
-  .socials {
+  .socials{
     gap:6px;
     font-size:14px;
+  }
+
+  .logo{
+    font-size:22px;
+  }
+
+  .logo img{
+    height:42px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .hero p{
+    font-size:16px;
   }
 }
 </style>
@@ -289,15 +355,15 @@ footer{
       <h3>Extras & Drinks</h3>
       <ul>
         <li>Jacket potato – comes with coleslaw and side salad – £7.50</li>
-        <li>Fillings: Prawn mayo, Tuna mayo and sweetcorn, Cheese and beans, Chilli, Chicken and bacon, Chicken tikka (Or any seafood filling)</li>
+        <li>Fillings: Prawn mayo, Tuna mayo and sweetcorn, Cheese and beans, Chilli con carne, Chicken and bacon, Chicken tikka (or any seafood filling)</li>
         <li>Add cheese for 50p</li>
 
         <li>Baguettes – come with crisps and side salad – £5.50 each</li>
         <li>Fillings: Prawn mayo, Tuna mayo and sweetcorn, Chicken and bacon, Chicken tikka, Ham, Cheese</li>
 
-        <li>Kids meal – ham or cheese roll, Pom bear crisps, drink… £4.50</li>
+        <li>Kids meal – ham or cheese roll, Pom-Bear crisps, drink – £4.50</li>
 
-        <li>Snacks: Chocolate / crisps / nobbys nuts – £1.50 each, Biscuits – £1 a pack</li>
+        <li>Snacks: Chocolate / crisps / Nobby’s nuts – £1.50 each, Biscuits – £1 a pack</li>
 
         <li>Drinks:</li>
         <li>Beers/cider – £4.50 each</li>
@@ -309,44 +375,111 @@ footer{
         <li>Soft drinks – £1.50 each</li>
         <li>Hot chocolate – £2</li>
         <li>Luxury hot chocolate with cream and marshmallows – £2.50</li>
-        <li>Tea and Coffee – £1.50 each</li>
+        <li>Tea and coffee – £1.50 each</li>
         <li>Latte – £2</li>
         <li>Cappuccino – £2</li>
         <li>Add syrup for 50p</li>
       </ul>
     </div>
 
+    <a href="#boattrips">Boat Trips</a>
     <a href="#find">Find Us</a>
     <a href="#hours">Opening Times</a>
     <a href="javascript:void(0)" onclick="showHeaderReview()">Reviews ▾</a>
-    <a href="javascript:void(0)" onclick="alert('Voyager catamaran boat trips coming soon. ⛴️⚓️')">Boat Trips</a>
   </nav>
 
-  <!-- Reviews only in header -->
   <div id="headerReview">
-    <p>Rich Dicks – Amazing selection and friendly staff.</p>
-    <p>Jane Smith – Fresh seafood, excellent service!</p>
-    <p>Tom H. – Highly recommend The Little Blue Hut!</p>
+    <p>“Lovely fresh seafood and really friendly service.”</p>
+    <p>“Great little place by the harbour — definitely worth a visit.”</p>
+    <p>“Fresh food, good prices and a lovely local spot.”</p>
   </div>
 </header>
 
 <section class="hero">
   <h1>The Little Blue Hut</h1>
-  <p>Fresh Seafood & Shellfish by Queenborough Creek</p>
+  <p><strong>Fresh seafood, shellfish, snacks and drinks by Queenborough Harbour</strong></p>
+  <p>Also promoting local Voyager Boat Trips departing from Queenborough Harbour — perfect for a day out on the water.</p>
 
   <a class="whatsapp-btn"
      href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20to%20place%20an%20order."
      target="_blank">
      Order via WhatsApp
   </a>
+
+  <a class="secondary-btn"
+     href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20to%20ask%20about%20the%20boat%20trips."
+     target="_blank">
+     Ask About Boat Trips
+  </a>
 </section>
 
 <section id="about">
   <h2>About Us</h2>
   <p>
-    Located beside Queenborough Harbour, The Little Blue Hut is a small family run seafood & snack bar.
-    We carefully source the finest seafood & shellfish full of freshness and flavour — proper honest food done well.
+    Located beside Queenborough Harbour, The Little Blue Hut is a small family-run seafood and snack bar.
+    We carefully source the finest seafood and shellfish full of freshness and flavour — proper honest food done well.
   </p>
+</section>
+
+<section id="boattrips" class="boat-trips">
+  <h2>Voyager Boat Trips</h2>
+  <p><strong>Departing from Queenborough Harbour</strong></p>
+  <p>Looking for a great local day out on the water? Check out these trips with Voyager Boat Trips:</p>
+
+  <div class="trip">
+    <h3>⚓ Sheerness Harbour & Montgomery Wreck</h3>
+    <p>
+      • Up to 10 people<br>
+      • £25 per person (£250 for the whole boat)<br>
+      • Approx 2 hours<br>
+      • Free tea & coffee
+    </p>
+  </div>
+
+  <div class="trip">
+    <h3>🌊 Red Sand Towers Trip</h3>
+    <p>
+      Via Sheerness Harbour, passing Grain Martello Tower & Montgomery Wreck<br>
+      🎣 Optional bass fishing with lures<br>
+      • £40 per person (up to 10 people)<br>
+      • Up to 4 hours
+    </p>
+  </div>
+
+  <div class="trip">
+    <h3>🦭 Seal Watching – Round the Island Trip</h3>
+    <p>
+      See the seals on Horse Bank in the Swale, Red Sand Towers & Montgomery Wreck<br>
+      🎣 Bass fishing with rods supplied (optional)<br>
+      • £50 per person (up to 10 people)<br>
+      • Approx 5 hours
+    </p>
+  </div>
+
+  <div class="trip">
+    <h3>🚤 Private Charter Available</h3>
+    <p>
+      • Charter the whole boat – £500 (up to 10 people)<br>
+      • Works out at £50 per person<br>
+      • Approx 5 hours<br>
+      • Fishing rods supplied
+    </p>
+  </div>
+
+  <p>
+    ✅ W.C onboard<br>
+    ☕ Free hot drinks<br>
+    👥 Seating for 10<br>
+    🔭 Bring binoculars
+  </p>
+
+  <p><strong>Why not pop by The Little Blue Hut for some fresh seafood before or after your trip?</strong></p>
+
+  <a class="whatsapp-btn"
+     href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20more%20information%20about%20the%20boat%20trips."
+     target="_blank">
+     Message for Boat Trip Info
+  </a>
 </section>
 
 <section id="find">
@@ -366,7 +499,7 @@ footer{
 </section>
 
 <footer>
-© The Little Blue Hut
+  © The Little Blue Hut
 </footer>
 
 <script>
@@ -380,7 +513,6 @@ function toggleDropdown(){
   drop.style.display = drop.style.display === "block" ? "none" : "block";
 }
 
-// Show reviews only in header
 function showHeaderReview(){
   const review = document.getElementById("headerReview");
   review.style.display = review.style.display === "block" ? "none" : "block";
