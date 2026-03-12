@@ -4,41 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Little Blue Hut | Fresh Seafood & Shellfish Queenborough | Isle of Sheppey</title>
-<meta name="description" content="The Little Blue Hut – Fresh seafood and shellfish beside Queenborough Harbour on the Isle of Sheppey. Order seafood, shellfish, baguettes, jacket potatoes and more.">
+<title>The Little Blue Hut</title>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZKY44F4Z09"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-ZKY44F4Z09');
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "The Little Blue Hut",
-  "image": "https://thelittlebluehut.uk/images/logo.JPG",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "South Street",
-    "addressLocality": "Queenborough",
-    "postalCode": "ME11 5AF",
-    "addressCountry": "UK"
-  },
-  "telephone": "07734 207042",
-  "servesCuisine": "Seafood",
-  "url": "https://thelittlebluehut.uk",
-  "sameAs": [
-    "https://www.facebook.com/trawlermanscatch",
-    "https://www.instagram.com/thelittlebluehut_qb",
-    "https://www.tiktok.com/@thelittlebluehut.qb"
-  ]
-}
-</script>
-
+<!-- Lobster font -->
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 <style>
@@ -47,24 +15,12 @@ body{
   font-family:Arial, Helvetica, sans-serif;
   background:#f4fbff;
   color:#12343b;
-  line-height:1.6;
 }
 
-section{
-  padding:40px 20px;
-  max-width:1000px;
-  margin:auto;
-}
+h1,h2,h3{margin:0 0 10px}
+section{padding:40px 20px; max-width:1000px; margin:auto}
 
-h1,h2,h3{
-  margin:0 0 12px;
-}
-
-h2{
-  font-size:30px;
-  color:#0e4d64;
-}
-
+/* ---------- HEADER ---------- */
 header{
   background:#0e4d64;
   color:white;
@@ -78,9 +34,11 @@ header{
   justify-content:space-between;
   align-items:center;
   padding:15px 20px;
+  flex-wrap:nowrap;
 }
 
-.logo-socials{
+/* Wrap logo + socials together */
+.logo-socials {
   display:flex;
   align-items:center;
   gap:20px;
@@ -91,30 +49,32 @@ header{
   display:flex;
   align-items:center;
   gap:10px;
-  font-size:28px;
+  font-size:28px; /* slightly bigger text */
   font-family:'Lobster', cursive;
 }
 
 .logo img{
-  height:50px;
-  border-radius:6px;
+  height:50px; /* updated logo height */
+  width:auto;
 }
 
-.socials{
+.socials {
   display:flex;
   gap:12px;
-  flex-wrap:wrap;
+  align-items:center;
+  font-size:16px;
 }
 
-.socials a{
+.socials a {
   color:white;
   text-decoration:none;
   padding:4px 8px;
   background:rgba(255,255,255,0.1);
   border-radius:6px;
+  transition:background 0.2s;
 }
 
-.socials a:hover{
+.socials a:hover {
   background:rgba(255,255,255,0.3);
 }
 
@@ -123,6 +83,7 @@ header{
   cursor:pointer;
 }
 
+/* ---------- MENU ---------- */
 .menu{
   display:none;
   flex-direction:column;
@@ -136,15 +97,15 @@ header{
   border-top:1px solid rgba(255,255,255,0.2);
 }
 
-.menu a:hover{
-  background:#156f8c;
-}
+.menu a:hover{background:#156f8c}
 
+/* ---------- DROPDOWN ---------- */
 .dropdown-content{
   display:none;
   background:#0e4d64;
-  max-height:500px;
+  max-height:450px;
   overflow-y:auto;
+  border:1px solid rgba(255,255,255,0.2);
   padding:10px;
   margin:0 20px 10px;
   border-radius:8px;
@@ -153,7 +114,7 @@ header{
 .dropdown-content ul{
   list-style:none;
   padding:0;
-  margin:0 0 10px;
+  margin:0;
 }
 
 .dropdown-content li{
@@ -163,15 +124,13 @@ header{
 }
 
 .dropdown-content h3{
-  color:white;
-  margin-top:14px;
+  margin-top:10px;
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,0.2);
+  padding-bottom:4px;
 }
 
-.dropdown-content p{
-  color:white;
-  margin:8px 0 12px;
-}
-
+/* ---------- HERO ---------- */
 .hero{
   background:#b9e6ff;
   text-align:center;
@@ -179,27 +138,15 @@ header{
 }
 
 .hero h1{
-  font-size:42px;
+  font-size:38px;
   font-family:'Lobster', cursive;
 }
 
-.hero p{
-  font-size:18px;
-  max-width:700px;
-  margin:0 auto 10px;
-}
-
-.button-row{
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:20px;
-}
-
-.whatsapp-btn,
-.menu-btn{
+/* ---------- WHATSAPP ---------- */
+.whatsapp-btn{
   display:inline-block;
+  margin-top:20px;
+  background:#25D366;
   color:#fff;
   padding:14px 22px;
   border-radius:8px;
@@ -208,44 +155,11 @@ header{
   font-weight:bold;
 }
 
-.whatsapp-btn{
-  background:#25D366;
+.whatsapp-btn:hover{
+  opacity:0.9;
 }
 
-.menu-btn{
-  background:#0e4d64;
-}
-
-.menu-section{
-  background:#ffffff;
-  border-radius:12px;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-  padding:30px 20px;
-}
-
-.menu-category{
-  margin-bottom:28px;
-}
-
-.menu-category ul{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.menu-category li{
-  padding:8px 0;
-  border-bottom:1px solid #d8ebf3;
-}
-
-.notice-box{
-  background:#e6f7ff;
-  border-left:5px solid #0e4d64;
-  padding:16px;
-  border-radius:8px;
-  margin-top:20px;
-}
-
+/* ---------- MAP ---------- */
 iframe{
   width:100%;
   height:300px;
@@ -253,19 +167,7 @@ iframe{
   border-radius:10px;
 }
 
-.contact{
-  text-align:center;
-  background:#e6f7ff;
-  padding:30px;
-  border-radius:10px;
-  margin-top:20px;
-}
-
-.contact h2{
-  font-family:'Lobster', cursive;
-  font-size:30px;
-}
-
+/* ---------- FOOTER ---------- */
 footer{
   background:#0e4d64;
   color:white;
@@ -273,8 +175,35 @@ footer{
   padding:20px;
 }
 
-#about,#fullmenu,#find,#hours{
-  scroll-margin-top:90px;
+/* ---------- FIX SCROLLING FOR STICKY HEADER ---------- */
+#about, #find, #hours {
+  scroll-margin-top: 90px;
+}
+
+/* ---------- SECTION HEADINGS IN LOBSTER FONT ---------- */
+#about h2, #find h2, #hours h2 {
+  font-family: 'Lobster', cursive;
+  font-size: 32px;
+}
+
+/* ---------- REVIEW DROPDOWN IN HEADER ---------- */
+#headerReview{
+  display:none;
+  background:#e0f7ff;
+  color:#0e4d64;
+  padding:10px;
+  text-align:center;
+  font-weight:bold;
+  border-radius:8px;
+  margin-top:5px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media screen and (max-width:768px){
+  .socials {
+    gap:6px;
+    font-size:14px;
+  }
 }
 </style>
 </head>
@@ -285,7 +214,7 @@ footer{
   <div class="navbar">
     <div class="logo-socials">
       <div class="logo">
-        <img src="images/logo.JPG" alt="The Little Blue Hut">
+        <img src="images/logo.JPG" alt="The Little Blue Hut Logo">
         The Little Blue Hut
       </div>
 
@@ -301,9 +230,7 @@ footer{
 
   <nav class="menu" id="menu">
     <a href="#about">About</a>
-    <a href="#fullmenu">Full Menu</a>
-
-    <a href="javascript:void(0)" onclick="toggleDropdown()">Menu Preview ▾</a>
+    <a href="javascript:void(0)" onclick="toggleDropdown()">Menu ▾</a>
 
     <div id="menuDropdown" class="dropdown-content">
       <h3>Seafood</h3>
@@ -318,228 +245,100 @@ footer{
         <li>King prawns – £4 small / £8 large</li>
         <li>Sweet chilli prawns – £4</li>
         <li>Seafood mix – £5</li>
-        <li>Shell-on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
-      </ul>
-
-      <p><strong>See full menu further down this page.</strong></p>
-    </div>
-
-    <a href="javascript:void(0)" onclick="toggleBoatTrips()">Boat Trips ▾</a>
-
-    <div id="boatTripsDropdown" class="dropdown-content">
-      <h3>🚤 Voyager Boat Trips – Isle of Sheppey 🌊</h3>
-
-      <ul>
-        <li><strong>📍 Departing from Queenborough Harbour</strong></li>
-      </ul>
-
-      <p>Looking for a great local day out on the water? Check out these trips with Voyager Boat Trips:</p>
-
-      <h3>⚓ Sheerness Harbour & Montgomery Wreck</h3>
-      <ul>
-        <li>Up to 10 people</li>
-        <li>£25 per person (£250 for the whole boat)</li>
-        <li>Approx 2 hours</li>
-        <li>Free tea & coffee</li>
-      </ul>
-
-      <h3>🌊 Red Sand Towers Trip</h3>
-      <ul>
-        <li>Via Sheerness Harbour, passing Grain Martello Tower & the Montgomery Wreck</li>
-        <li>🎣 Optional bass fishing with lures</li>
-        <li>£40 per person (up to 10 people)</li>
-        <li>Up to 4 hours</li>
-      </ul>
-
-      <h3>🦭 Seal Watching – Round the Island Trip</h3>
-      <ul>
-        <li>See the seals on Horse Bank in the Swale, Red Sand Towers & the Montgomery Wreck</li>
-        <li>🎣 Bass fishing with rods supplied (optional)</li>
-        <li>£50 per person (up to 10 people)</li>
-        <li>Approx 5 hours</li>
-      </ul>
-
-      <h3>🚤 Private Charter Available 🎣🐟</h3>
-      <ul>
-        <li>Charter the whole boat – £500 (up to 10 people)</li>
-        <li>Works out £50 per person</li>
-        <li>Approx 5 hours</li>
-        <li>Fishing rods supplied</li>
-      </ul>
-
-      <h3>Trip Features</h3>
-      <ul>
-        <li>✅ W.C onboard</li>
-        <li>☕ Free hot drinks</li>
-        <li>👥 Seating for 10</li>
-        <li>🔭 Bring binoculars</li>
-      </ul>
-
-      <p><strong>🌟 Perfect trip for friends or family!</strong></p>
-      <p><strong>To book call 07930221135</strong></p>
-      <p>📍 Why not pop by The Little Blue Hut for some fresh seafood before or after your trip 🦀🦐</p>
-    </div>
-
-    <a href="#find">Find Us</a>
-    <a href="#hours">Opening Times</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>The Little Blue Hut</h1>
-  <p>Fresh seafood, shellfish, baguettes, jacket potatoes and more by Queenborough Harbour.</p>
-
-  <div class="button-row">
-    <a class="whatsapp-btn"
-      href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20to%20place%20an%20order."
-      target="_blank">
-      Order via WhatsApp
-    </a>
-
-    <a class="menu-btn" href="#fullmenu">View Full Menu</a>
-  </div>
-</section>
-
-<section id="about">
-  <h2>About Us</h2>
-  <p>
-    Located beside Queenborough Harbour, The Little Blue Hut is a small family-run seafood and snack bar.
-    We carefully source quality seafood and shellfish chosen for freshness and flavour, along with baguettes,
-    jacket potatoes, drinks and more.
-  </p>
-</section>
-
-<section id="fullmenu">
-  <div class="menu-section">
-    <h2>Full Menu</h2>
-    <p>Fresh seafood and shellfish straight from Billingsgate Market, along with baguettes, jacket potatoes, platters and drinks.</p>
-
-    <div class="menu-category">
-      <h3>🦐 Seafood</h3>
-      <ul>
-        <li>Jellied eels – £5.50 / 5 pieces</li>
-        <li>Cockles – £3.50 small / £7 large</li>
-        <li>Whelks – £3.50 small / £7 large</li>
-        <li>Winkles – half pint £4.50 / 1 pint £6.50</li>
-        <li>Mussels – £3.50 small / £7 large</li>
-        <li>Crayfish tails – £4 small / £8 large</li>
-        <li>Prawns – £4 small / £8 large</li>
-        <li>King prawns – £4 small / £8 large</li>
-        <li>Sweet chilli prawns – £4</li>
-        <li>Seafood mix – £5</li>
-        <li>Shell-on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
+        <li>Shell on prawns – half pint £3 / 1 pint £6 / 5kg box £40</li>
         <li>Crab sticks – £2.50 for 10 or 30p each</li>
-        <li>Pinx – 6 for £3 / 20 for £9</li>
+        <li>Pinx – 6 for £3 or 20 for £9</li>
         <li>Prawn cocktail – £5</li>
         <li>Seafood salad bowl – £10</li>
         <li>Crab meat (454g) – £12</li>
         <li>Cromer crabs – £8 each</li>
         <li>Dressed crab – £9</li>
-        <li>Oysters – £2 each / 3 for £5</li>
+        <li>Oysters – £2 each or 3 for £5</li>
         <li>Brown shrimp – £3.50 small / £8 large</li>
-        <li>New Zealand mussels – 6 for £4 / box £12</li>
-        <li>Crab flake – £3.50 small / £6 large / slab £10</li>
+        <li>New Zealand mussels – 6 for £4 or box £12</li>
+        <li>Crab flake – small £3.50 / large £6 / slab £10</li>
         <li>Crab claws – 5 for £6.50</li>
         <li>XL mixed pot – £8</li>
-        <li>Crevette prawns – £1.50 each / 4 for £5</li>
+        <li>Crevette prawns – £1.50 each or 4 for £5</li>
       </ul>
-    </div>
 
-    <div class="menu-category">
-      <h3>🧂 Condiments</h3>
+      <h3>Condiments</h3>
       <ul>
         <li>Vinegar / chilli vinegar – £2.50 bottle</li>
         <li>Coleman’s seafood sauce – £2</li>
         <li>Seafood sauce (1 litre) – £4.50</li>
         <li>Sweet chilli sauce (1 litre) – £4.50</li>
       </ul>
-    </div>
 
-    <div class="menu-category">
-      <h3>🦀 Seafood Platters</h3>
+      <h3>Seafood Platters</h3>
       <ul>
         <li>Small – £25</li>
         <li>Medium – £40</li>
         <li>Large – £60</li>
         <li>Extra large – £80</li>
       </ul>
-    </div>
 
-    <div class="menu-category">
-      <h3>🥔 Jacket Potatoes</h3>
+      <h3>Extras & Drinks</h3>
       <ul>
-        <li>Served with coleslaw and side salad – £7.50</li>
-        <li>Prawn mayo</li>
-        <li>Tuna mayo &amp; sweetcorn</li>
-        <li>Cheese &amp; beans</li>
-        <li>Chilli</li>
-        <li>Chicken &amp; bacon</li>
-        <li>Chicken tikka</li>
-        <li>Or any seafood filling</li>
-        <li>Add cheese – 50p</li>
-      </ul>
-    </div>
+        <li>Jacket potato – comes with coleslaw and side salad – £7.50</li>
+        <li>Fillings: Prawn mayo, Tuna mayo and sweetcorn, Cheese and beans, Chilli, Chicken and bacon, Chicken tikka (Or any seafood filling)</li>
+        <li>Add cheese for 50p</li>
 
-    <div class="menu-category">
-      <h3>🥖 Baguettes</h3>
-      <ul>
-        <li>Served with crisps and side salad – £5.50</li>
-        <li>Prawn mayo</li>
-        <li>Tuna mayo &amp; sweetcorn</li>
-        <li>Chicken &amp; bacon</li>
-        <li>Chicken tikka</li>
-        <li>Ham</li>
-        <li>Cheese</li>
-      </ul>
-    </div>
+        <li>Baguettes – come with crisps and side salad – £5.50 each</li>
+        <li>Fillings: Prawn mayo, Tuna mayo and sweetcorn, Chicken and bacon, Chicken tikka, Ham, Cheese</li>
 
-    <div class="menu-category">
-      <h3>🧃 Kids Meal</h3>
-      <ul>
-        <li>Ham or cheese roll, Pom Bear crisps, drink – £4.50</li>
-      </ul>
-    </div>
+        <li>Kids meal – ham or cheese roll, Pom bear crisps, drink… £4.50</li>
 
-    <div class="menu-category">
-      <h3>🍫 Snacks</h3>
-      <ul>
-        <li>Chocolate – £1.50</li>
-        <li>Crisps – £1.50</li>
-        <li>Nobby’s Nuts – £1.50</li>
-        <li>Biscuits – £1 a pack</li>
-      </ul>
-    </div>
+        <li>Snacks: Chocolate / crisps / nobbys nuts – £1.50 each, Biscuits – £1 a pack</li>
 
-    <div class="menu-category">
-      <h3>🍻 Drinks</h3>
-      <ul>
-        <li>Beer / cider – £4.50</li>
-        <li>Wine – £5</li>
+        <li>Drinks:</li>
+        <li>Beers/cider – £4.50 each</li>
+        <li>Wines – £5 each</li>
         <li>Prosecco – £7</li>
-        <li>Spirits with mixer – £5</li>
+        <li>Spirits with mixer – £5 each</li>
         <li>25ml spirit shot – £4</li>
-        <li>Soft drinks – £1.50</li>
-      </ul>
-    </div>
-
-    <div class="menu-category">
-      <h3>☕ Hot Drinks</h3>
-      <ul>
-        <li>Tea – £1.50</li>
-        <li>Coffee – £1.50</li>
+        <li>Baileys hot chocolate with squirty cream – £5</li>
+        <li>Soft drinks – £1.50 each</li>
+        <li>Hot chocolate – £2</li>
+        <li>Luxury hot chocolate with cream and marshmallows – £2.50</li>
+        <li>Tea and Coffee – £1.50 each</li>
         <li>Latte – £2</li>
         <li>Cappuccino – £2</li>
-        <li>Hot chocolate – £2</li>
-        <li>Luxury hot chocolate with cream &amp; marshmallows – £2.50</li>
-        <li>Baileys hot chocolate with squirty cream – £5</li>
-        <li>Add syrup – 50p</li>
+        <li>Add syrup for 50p</li>
       </ul>
     </div>
 
-    <div class="notice-box">
-      <strong>Why not check out our new website, thelittlebluehut.uk, for our full menu and products.</strong>
-    </div>
+    <a href="#find">Find Us</a>
+    <a href="#hours">Opening Times</a>
+    <a href="javascript:void(0)" onclick="showHeaderReview()">Reviews ▾</a>
+    <a href="javascript:void(0)" onclick="alert('Voyager catamaran boat trips coming soon. ⛴️⚓️')">Boat Trips</a>
+  </nav>
+
+  <!-- Reviews only in header -->
+  <div id="headerReview">
+    <p>Rich Dicks – Amazing selection and friendly staff.</p>
+    <p>Jane Smith – Fresh seafood, excellent service!</p>
+    <p>Tom H. – Highly recommend The Little Blue Hut!</p>
   </div>
+</header>
+
+<section class="hero">
+  <h1>The Little Blue Hut</h1>
+  <p>Fresh Seafood & Shellfish by Queenborough Creek</p>
+
+  <a class="whatsapp-btn"
+     href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20to%20place%20an%20order."
+     target="_blank">
+     Order via WhatsApp
+  </a>
+</section>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Located beside Queenborough Harbour, The Little Blue Hut is a small family run seafood & snack bar.
+    We carefully source the finest seafood & shellfish full of freshness and flavour — proper honest food done well.
+  </p>
 </section>
 
 <section id="find">
@@ -551,21 +350,15 @@ footer{
 <section id="hours">
   <h2>Opening Times</h2>
   <p>
-    Friday – Sunday: 10am – 5pm<br>
-    Bank Holidays: 10am – 5pm
-  </p>
-</section>
-
-<section class="contact">
-  <h2>Contact Us</h2>
-  <p>
-    📞 Phone: <strong>07734 207042</strong><br><br>
-    Feel free to call or message us on WhatsApp for seafood orders or enquiries.
+    Friday – 10am – 4pm<br>
+    Saturday – 10am – 4pm<br>
+    Sunday – 10am – 4pm<br>
+    Bank Holidays – 10am – 4pm
   </p>
 </section>
 
 <footer>
-  © The Little Blue Hut
+© The Little Blue Hut
 </footer>
 
 <script>
@@ -579,9 +372,10 @@ function toggleDropdown(){
   drop.style.display = drop.style.display === "block" ? "none" : "block";
 }
 
-function toggleBoatTrips(){
-  const boat = document.getElementById("boatTripsDropdown");
-  boat.style.display = boat.style.display === "block" ? "none" : "block";
+// Show reviews only in header
+function showHeaderReview(){
+  const review = document.getElementById("headerReview");
+  review.style.display = review.style.display === "block" ? "none" : "block";
 }
 </script>
 
