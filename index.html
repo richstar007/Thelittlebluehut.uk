@@ -1,5 +1,3 @@
-Yes mate — replace your full index.html with this. I’ve put Loaded Nachos and Loaded Wraps directly under Jacket Potato, before baguettes.
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +5,7 @@ Yes mate — replace your full index.html with this. I’ve put Loaded Nachos an
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Little Blue Hut</title>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 <style>
 body{margin:0;font-family:Arial, Helvetica, sans-serif;background:#f4fbff;color:#12343b}
 h1,h2,h3{margin:0 0 10px}
@@ -43,6 +42,7 @@ iframe{width:100%;height:300px;border:0;border-radius:10px}
 footer{background:#0e4d64;color:white;text-align:center;padding:20px}
 #about,#find,#hours{scroll-margin-top:90px}
 #about h2,#find h2,#hours h2{font-family:'Lobster', cursive;font-size:32px}
+
 @media screen and (max-width:768px){
 .navbar{align-items:flex-start}
 .logo-socials{flex-direction:column;align-items:flex-start;gap:12px}
@@ -55,7 +55,9 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
 }
 </style>
 </head>
+
 <body>
+
 <header>
   <div class="navbar">
     <div class="logo-socials">
@@ -63,17 +65,21 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
         <img src="images/logo.JPG" alt="The Little Blue Hut Logo">
         <span>The Little Blue Hut</span>
       </div>
+
       <div class="socials">
         <a href="https://www.facebook.com/trawlermanscatch" target="_blank">Facebook</a>
         <a href="https://www.instagram.com/thelittlebluehut_qb" target="_blank">Instagram</a>
         <a href="https://www.tiktok.com/@thelittlebluehut.qb" target="_blank">TikTok</a>
       </div>
     </div>
+
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
+
   <nav class="menu" id="menu">
     <a href="#about">About</a>
     <a href="javascript:void(0)" onclick="toggleDropdown()">Menu ▾</a>
+
     <div id="menuDropdown" class="dropdown-content">
       <h3>Seafood</h3>
       <ul>
@@ -103,6 +109,7 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
         <li>XL mixed pot – £8</li>
         <li>Crevette prawns – £1.50 each or 4 for £5 or box £18</li>
       </ul>
+
       <h3>Condiments</h3>
       <ul>
         <li>Vinegar – £2 bottle</li>
@@ -111,6 +118,7 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
         <li>Seafood sauce (1 litre) – £4.50</li>
         <li>Sweet chilli sauce (1 litre) – £4.50</li>
       </ul>
+
       <h3>Seafood Platters</h3>
       <ul>
         <li>Small – £25</li>
@@ -118,19 +126,23 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
         <li>Large – £60</li>
         <li>Extra large – £80</li>
       </ul>
+
       <h3>Extras & Drinks</h3>
       <ul>
         <li>Jacket potato – comes with coleslaw and side salad – £7.50</li>
         <li>Fillings: Prawn mayo, Tuna mayo and sweetcorn, Cheese and beans, Chilli, Chicken and bacon, Chicken tikka (or any seafood filling)</li>
         <li>Add cheese for 50p</li>
+
         <li><strong>Loaded nachos – £5.50</strong></li>
         <li>Crispy nachos topped with hot cheese sauce</li>
         <li>Served with spring onion, salsa, guacamole, sour cream and crispy onions</li>
         <li>Upgrade to £7.50 with: Chilli con carne, Pulled pork, LBH seafood mix, Prawns in garlic mayo or Sweet chilli prawns</li>
+
         <li><strong>Loaded wraps – from £5.50</strong></li>
         <li>Soft wraps packed with your choice of filling</li>
         <li>All come with crisps and side salad</li>
         <li>Fillings: Chilli con carne, Pulled pork, LBH seafood mix, Prawns in garlic mayo, Sweet chilli prawns, Prawn mayo, Tuna mayo & sweetcorn, Chicken & bacon, Chicken tikka, Ham, Cheese</li>
+
         <li>Baguettes – come with crisps and side salad – £5.50 each</li>
         <li>Fillings: Prawn mayo, Tuna mayo and sweetcorn, Chicken and bacon, Chicken tikka, Ham, Cheese</li>
         <li>Kids meal – ham or cheese roll, Pom bear crisps, drink… £4.50</li>
@@ -151,56 +163,76 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
         <li>Add syrup for 50p</li>
       </ul>
     </div>
+
     <a href="#find">Find Us</a>
     <a href="#hours">Opening Times</a>
     <a href="javascript:void(0)" onclick="showHeaderReview()">Reviews ▾</a>
+
     <div id="headerReview" class="review-content">
       <h3>Customer Reviews</h3>
       <p>Rich Dicks – Amazing selection and friendly staff.</p>
       <p>Jane Smith – Fresh seafood, excellent service!</p>
       <p>Tom H. – Highly recommend The Little Blue Hut!</p>
     </div>
+
     <a href="javascript:void(0)" onclick="toggleBoatTrips()">Boat Trips ▾</a>
+
     <div id="boatTripsDropdown" class="boat-content">
       <h3>🚤 Voyager Boat Trips – Isle of Sheppey</h3>
       <p><strong>📍 Departing from Queenborough Harbour</strong></p>
       <p><strong>🌊 Private boat trips – bring up to 10 people for one fixed price</strong></p>
+
       <div class="boat-divider"></div>
+
       <p><strong>⚓ Harbour &amp; Montgomery Wreck Cruise</strong><br>
       Relaxing trip around Sheerness Harbour and the famous SS Richard Montgomery WWII shipwreck.<br>
       ☕ Free tea &amp; coffee</p>
+
       <p>
       ⏱ Approx. 2 hours<br>
       🚤 Whole boat charter (up to 10 people)<br>
       💷 £250 per trip (just £25 each if 10 aboard)
       </p>
+
       <div class="boat-divider"></div>
+
       <p><strong>🌊 Red Sand Towers Adventure ⭐ Most Popular</strong><br>
       Cruise via Sheerness Harbour, passing Grain Martello Tower and the SS Richard Montgomery wreck, before heading out to the famous Red Sand Towers.</p>
+
       <p>🎣 Optional bass fishing with lures</p>
+
       <p>
       ⏱ Up to 4 hours<br>
       🚤 Whole boat charter (up to 10 people)<br>
       💷 £400 per trip (just £40 each if 10 aboard)
       </p>
+
       <div class="boat-divider"></div>
+
       <p><strong>🦭 Seal Watching – Round the Island Trip</strong><br>
       Sail around the Isle of Sheppey, under the bridges to see seals on Horse Bank in the Swale, then out past Whitstable to the Red Sand Towers, returning via the SS Richard Montgomery wreck.</p>
+
       <p>🎣 Optional bass fishing with rods supplied</p>
+
       <p>
       ⏱ Approx. 5 hours<br>
       🚤 Whole boat charter (up to 10 people)<br>
       💷 £500 per trip (just £50 each if 10 aboard)
       </p>
+
       <div class="boat-divider"></div>
+
       <p><strong>🐟🎣 Fishing Trips</strong><br>
       Rods supplied or bring your own gear.</p>
+
       <p>
       ⏱ Approx. 5 hours<br>
       🚤 Whole boat charter (up to 10 people)<br>
       💷 £500 per trip (just £50 each if 10 aboard)
       </p>
+
       <div class="boat-divider"></div>
+
       <p>
       ☕ Free tea &amp; coffee supplied on all trips.<br>
       🚻 WC toilet on board.<br>
@@ -208,6 +240,7 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
       🔭 Recommend to bring binoculars.<br>
       ✅ Fully licensed and insured
       </p>
+
       <div class="boat-booking-bar">
         📞 Boat Trip Bookings:
         <a href="tel:07930221135">07930 22 11 35</a>
@@ -215,15 +248,18 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
     </div>
   </nav>
 </header>
+
 <section class="hero">
   <h1>The Little Blue Hut</h1>
   <p>Fresh Seafood & Shellfish by Queenborough Creek</p>
+
   <a class="whatsapp-btn"
      href="https://wa.me/447734207042?text=Hi%20Little%20Blue%20Hut%2C%20I%E2%80%99d%20like%20to%20place%20an%20order."
      target="_blank">
      Order via WhatsApp
   </a>
 </section>
+
 <section id="about">
   <h2>About Us</h2>
   <p>
@@ -231,11 +267,13 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
     We carefully source the finest seafood & shellfish full of freshness and flavour — proper honest food done well.
   </p>
 </section>
+
 <section id="find">
   <h2>Find Us</h2>
   <p>South Street, Queenborough, ME11 5AF</p>
   <iframe src="https://www.google.com/maps?q=ME11%205AF&output=embed"></iframe>
 </section>
+
 <section id="hours">
   <h2>Opening Times</h2>
   <p>
@@ -245,38 +283,47 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
     Bank Holidays – 10am – 4pm
   </p>
 </section>
+
 <footer>
 © The Little Blue Hut
 </footer>
+
 <script>
 function toggleMenu(){
   const menu = document.getElementById("menu");
   menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
+
 function toggleDropdown(){
   const drop = document.getElementById("menuDropdown");
   const reviews = document.getElementById("headerReview");
   const boats = document.getElementById("boatTripsDropdown");
+
   drop.style.display = drop.style.display === "block" ? "none" : "block";
   reviews.style.display = "none";
   boats.style.display = "none";
 }
+
 function showHeaderReview(){
   const review = document.getElementById("headerReview");
   const drop = document.getElementById("menuDropdown");
   const boats = document.getElementById("boatTripsDropdown");
+
   review.style.display = review.style.display === "block" ? "none" : "block";
   drop.style.display = "none";
   boats.style.display = "none";
 }
+
 function toggleBoatTrips(){
   const boats = document.getElementById("boatTripsDropdown");
   const drop = document.getElementById("menuDropdown");
   const reviews = document.getElementById("headerReview");
+
   boats.style.display = boats.style.display === "block" ? "none" : "block";
   drop.style.display = "none";
   reviews.style.display = "none";
 }
 </script>
+
 </body>
 </html>
