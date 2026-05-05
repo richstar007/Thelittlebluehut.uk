@@ -188,9 +188,28 @@ header{
 }
 
 .hero{
-  background:#b9e6ff;
+  background:url("images/hut.jpg") center/cover no-repeat;
   text-align:center;
-  padding:60px 20px;
+  padding:120px 20px;
+  color:white;
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+}
+
+.hero h1,
+.hero p,
+.whatsapp-btn{
+  position:relative;
+  z-index:1;
 }
 
 .hero h1{
@@ -373,6 +392,7 @@ footer{
         <li>Beers/cider – £4.50 each</li>
         <li>Wines – £5 each</li>
         <li>Prosecco – £7</li>
+        <li>Cocktails – £7 or 2 for £12</li>
         <li>Spirits with mixer – £5 each</li>
         <li>25ml spirit shot – £4</li>
         <li>Baileys hot chocolate with squirty cream – £5</li>
