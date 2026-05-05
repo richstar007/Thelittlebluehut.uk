@@ -79,15 +79,21 @@ header{
 }
 
 .hamburger{
-  font-size:26px;
+  font-size:32px;
   cursor:pointer;
   flex-shrink:0;
+  user-select:none;
+  padding:5px 10px;
 }
 
 .menu{
   display:none;
   flex-direction:column;
   background:#0e4d64;
+}
+
+.menu.open{
+  display:flex;
 }
 
 .menu a{
@@ -108,6 +114,12 @@ header{
   padding:15px;
   margin:10px 20px;
   border-radius:8px;
+}
+
+.dropdown-content.show,
+.review-content.show,
+.boat-content.show{
+  display:block;
 }
 
 .dropdown-content{
@@ -288,6 +300,15 @@ footer{
 
   .hero h1{
     font-size:30px;
+  }
+
+  .dropdown-content{
+    max-height:70vh;
+  }
+
+  .dropdown-content li{
+    font-size:14px;
+    line-height:1.35;
   }
 
   .boat-booking-bar{
@@ -504,4 +525,69 @@ footer{
 </section>
 
 <section id="about">
-  <h2>About Us
+  <h2>About Us</h2>
+  <p>
+    Located beside Queenborough Harbour, The Little Blue Hut is a small family run seafood & snack bar.
+    We carefully source the finest seafood & shellfish full of freshness and flavour — proper honest food done well.
+  </p>
+</section>
+
+<section id="find">
+  <h2>Find Us</h2>
+  <p>South Street, Queenborough, ME11 5AF</p>
+  <iframe src="https://www.google.com/maps?q=ME11%205AF&output=embed"></iframe>
+</section>
+
+<section id="hours">
+  <h2>Opening Times</h2>
+  <p>
+    Friday – 10am – 4pm<br>
+    Saturday – 10am – 4pm<br>
+    Sunday – 10am – 4pm<br>
+    Bank Holidays – 10am – 4pm
+  </p>
+</section>
+
+<footer>
+© The Little Blue Hut
+</footer>
+
+<script>
+function toggleMenu(){
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("open");
+}
+
+function toggleDropdown(){
+  const drop = document.getElementById("menuDropdown");
+  const reviews = document.getElementById("headerReview");
+  const boats = document.getElementById("boatTripsDropdown");
+
+  drop.classList.toggle("show");
+  reviews.classList.remove("show");
+  boats.classList.remove("show");
+}
+
+function showHeaderReview(){
+  const review = document.getElementById("headerReview");
+  const drop = document.getElementById("menuDropdown");
+  const boats = document.getElementById("boatTripsDropdown");
+
+  review.classList.toggle("show");
+  drop.classList.remove("show");
+  boats.classList.remove("show");
+}
+
+function toggleBoatTrips(){
+  const boats = document.getElementById("boatTripsDropdown");
+  const drop = document.getElementById("menuDropdown");
+  const reviews = document.getElementById("headerReview");
+
+  boats.classList.toggle("show");
+  drop.classList.remove("show");
+  reviews.classList.remove("show");
+}
+</script>
+
+</body>
+</html>
