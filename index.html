@@ -7,28 +7,136 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Arial, Helvetica, sans-serif;background:#f4fbff;color:#12343b}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4fbff;
+  color:#12343b;
+}
+
 h1,h2,h3{margin:0 0 10px}
 section{padding:40px 20px; max-width:1000px; margin:auto}
-header{background:#0e4d64;color:white;position:sticky;top:0;z-index:1000}
-.navbar{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;gap:15px}
-.logo-socials{display:flex;align-items:center;gap:20px;flex:1}
-.logo{display:flex;align-items:center;gap:10px;font-size:28px;font-family:'Lobster', cursive}
-.logo img{height:50px}
-.socials{display:flex;gap:10px}
-.socials a{color:white;text-decoration:none;padding:8px 12px;background:rgba(255,255,255,0.1);border-radius:6px}
-.hamburger{font-size:26px;cursor:pointer}
-.menu{display:none;flex-direction:column;background:#0e4d64}
-.menu a{color:white;text-decoration:none;padding:14px 20px;border-top:1px solid rgba(255,255,255,0.2)}
-.dropdown-content{display:none;padding:15px;margin:10px 20px;background:#0e4d64;border-radius:8px;max-height:450px;overflow-y:auto}
-.dropdown-content ul{list-style:none;padding:0}
-.dropdown-content li{color:white;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.2)}
-.dropdown-content h3{color:white;border-bottom:1px solid rgba(255,255,255,0.2)}
-.hero{text-align:center;padding:60px 20px;background:#b9e6ff}
-.hero h1{font-family:'Lobster', cursive;font-size:38px}
-.whatsapp-btn{display:inline-block;margin-top:20px;background:#25D366;color:white;padding:14px 22px;border-radius:8px;text-decoration:none}
-iframe{width:100%;height:300px;border-radius:10px;border:0}
-footer{background:#0e4d64;color:white;text-align:center;padding:20px}
+
+header{
+  background:#0e4d64;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+  gap:15px;
+}
+
+.logo-socials{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  min-width:0;
+  flex:1;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:28px;
+  font-family:'Lobster', cursive;
+  line-height:1;
+  flex-shrink:0;
+}
+
+.logo img{
+  height:50px;
+  width:auto;
+  display:block;
+}
+
+.socials{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+
+.socials a{
+  color:white;
+  text-decoration:none;
+  padding:8px 12px;
+  background:rgba(255,255,255,0.1);
+  border-radius:6px;
+}
+
+.hamburger{
+  font-size:26px;
+  cursor:pointer;
+}
+
+.menu{
+  display:none;
+  flex-direction:column;
+  background:#0e4d64;
+}
+
+.menu a{
+  color:white;
+  text-decoration:none;
+  padding:14px 20px;
+  border-top:1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown-content{
+  display:none;
+  padding:15px;
+  margin:10px 20px;
+  border-radius:8px;
+  background:#0e4d64;
+  max-height:450px;
+  overflow-y:auto;
+}
+
+.dropdown-content ul{
+  list-style:none;
+  padding:0;
+}
+
+.dropdown-content li{
+  color:white;
+  padding:6px 0;
+  border-bottom:1px solid rgba(255,255,255,0.2);
+}
+
+.hero{
+  background:#b9e6ff;
+  text-align:center;
+  padding:60px 20px;
+}
+
+.hero h1{
+  font-family:'Lobster', cursive;
+}
+
+.whatsapp-btn{
+  display:inline-block;
+  margin-top:20px;
+  background:#25D366;
+  color:#fff;
+  padding:14px 22px;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+footer{
+  background:#0e4d64;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 </style>
 </head>
 
@@ -54,42 +162,26 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
 
 <nav class="menu" id="menu">
 <a href="#about">About</a>
-<a href="javascript:void(0)" onclick="toggleDropdown()">Menu ▾</a>
+<a href="#" onclick="toggleDropdown()">Menu ▾</a>
 
 <div id="menuDropdown" class="dropdown-content">
 
-<h3>Seafood</h3>
-<ul>
-<li>Crevette prawns – £1.20 each or 5 for £5 or box £18</li>
-</ul>
-
 <h3>Extras & Drinks</h3>
 <ul>
-
 <li><strong>Jacket potato – comes with coleslaw and side salad – £7.50</strong></li>
-<li>Fillings: Prawn mayo, Tuna mayo and sweetcorn, Cheese and beans, Chilli, Chicken and bacon, Chicken tikka (or any seafood filling)</li>
-<li>Add cheese for 50p</li>
+<li>Fillings...</li>
 
 <li><strong>Loaded nachos – £5.50</strong></li>
-<li>Crispy nachos topped with hot cheese sauce</li>
-<li>Served with spring onion, salsa, guacamole, sour cream and crispy onions</li>
-<li>Upgrade to £7.50 with: Chilli con carne, Pulled pork, LBH seafood mix, Prawns in garlic mayo or Sweet chilli prawns</li>
-
 <li><strong>Loaded wraps – from £5.50</strong></li>
-<li>All come with crisps and side salad</li>
 
-<li>Baguettes – £5.50</li>
-
-<li>Drinks:</li>
-<li>Beers/cider – £4.50</li>
-<li>Wines – £5</li>
+<li>Beers/cider – £4.50 each</li>
+<li>Wines – £5 each</li>
 <li>Prosecco – £7</li>
 <li>Cocktails – £7 or 2 for £12</li>
-
+<li>Spirits with mixer – £5 each</li>
 </ul>
 
 </div>
-
 </nav>
 </header>
 
@@ -97,21 +189,6 @@ footer{background:#0e4d64;color:white;text-align:center;padding:20px}
 <h1>The Little Blue Hut</h1>
 <p>Fresh Seafood & Shellfish by Queenborough Creek</p>
 <a class="whatsapp-btn" href="https://wa.me/447734207042">Order via WhatsApp</a>
-</section>
-
-<section id="about">
-<h2>About Us</h2>
-<p>Quality seafood served fresh by the creek.</p>
-</section>
-
-<section id="find">
-<h2>Find Us</h2>
-<iframe src="https://www.google.com/maps?q=ME11%205AF&output=embed"></iframe>
-</section>
-
-<section id="hours">
-<h2>Opening Times</h2>
-<p>Fri–Sun 10–4 + Bank Holidays</p>
 </section>
 
 <footer>
